@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="about-author section-padding">
+    <section className="about-author mb-80 pt-20">
       <div className="container with-pad">
         <div className="row lg-marg">
           <div className="col-lg-5 valign">

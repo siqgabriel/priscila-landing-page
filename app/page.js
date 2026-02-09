@@ -7,7 +7,7 @@ import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import Script from 'next/script';
 import Header from '@/components/home-personal/Header';
-
+import WorkshopTimeline from '@/components/home-personal/WorkshopTimeline';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import Marq from '@/components/home-personal/Marq';
 import About from '@/components/home-personal/About';
@@ -41,9 +41,10 @@ export default function Home() {
           <main className="main-bg o-hidden">
             <Header />
             <Marq />
-            <About />
             <Services />
             <Portfolio />
+            <WorkshopTimeline />
+            <About />
             {/* <Testimonials /> */}
           </main>
           <Footer />

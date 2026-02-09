@@ -2,17 +2,17 @@ import React from 'react';
 
 function Services() {
   return (
-    <section className="services-clas">
-      <div className="container section-padding bord-bottom-grd pt-0">
+    <section className="services-clas mb-40 pt-40">
+      <div className="container bord-bottom-grd pt-0">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>
               <span className="sub-title main-color mb-5">
-                Ferramentas práticas para líderes mais presentes e eficazes
+                Você não sai apenas com mais conhecimento.
               </span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
-                  O que você <span className="fw-200">pode trabalhar comigo</span>
+                  O que muda <span className="fw-200">depois do workshop</span>
                 </span>
               </h3>
             </div>
@@ -22,24 +22,21 @@ function Services() {
         <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
 
           {/* Card 1 */}
-          <div className="col-lg-4" style={{ marginBottom: '40px' }}>
-            <div className="item sub-bg-card md-mb30">
+          <div className="col-lg-4" style={{ marginBottom: '30px' }}>
+            <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
                 <img src="/assets/imgs/serv-icons/7.png" alt="Conversas Difíceis" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Conversas difíceis com clareza e humanidade
+                Mais segurança para liderar
               </h5>
               <div className="text mt-20">
                 <p>
-                  Aprenda a conduzir feedbacks, conflitos e pedidos delicados sem romper a confiança,
-                  usando ferramentas da Comunicação Não Violenta (CNV).
-                  Saia do confronto ou do silêncio e crie diálogos que realmente transformam relações.
-                  <br />
-                  <br />
+                  Desenvolva confiança interna para tomar decisões, conduzir pessoas e sustentar sua posição mesmo em cenários desafiadores.
+                  Você passa a liderar com mais firmeza, menos dúvida e mais coerência entre o que sente, pensa e comunica.
                 </p>
               </div>
-              <div className="flex align-items-center mt-40 justify-content-between">
+              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
                   href="#"
                   className=""
@@ -54,24 +51,23 @@ function Services() {
           </div>
 
           {/* Card 2 */}
-          <div className="col-lg-4" style={{ marginBottom: '40px' }}>
-            <div className="item sub-bg-card md-mb30">
+          <div className="col-lg-4" style={{ marginBottom: '30px' }}>
+            <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
                 <img src="/assets/imgs/serv-icons/8.png" alt="Liderança Consciente" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Liderança consciente e presença emocional
+                Mais clareza para se posicionar
               </h5>
               <div className="text mt-20">
                 <p>
-                  Desenvolva autoconsciência emocional e regulação interna para liderar sob pressão
-                  sem se desgastar ou reagir automaticamente.
-                  Fortaleça sua capacidade de estar 100% presente, mesmo nos dias mais intensos.
+                  Aprenda a expressar limites, expectativas e opiniões com objetividade e respeito, sem medo de gerar conflito ou de ser mal interpretado.
+                  Sua comunicação se torna mais direta, alinhada e estratégica.
                   <br />
                   <br />
                 </p>
               </div>
-              <div className="flex align-items-center mt-40 justify-content-between">
+              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
                   href="#"
                   className=""
@@ -86,22 +82,50 @@ function Services() {
           </div>
 
           {/* Card 3 */}
-          <div className="col-lg-4" style={{ marginBottom: '40px' }}>
+          <div className="col-lg-4" style={{ marginBottom: '30px' }}>
+            <div className="item sub-bg-card">
+              <div className="icon-img-serv mb-40">
+                <img src="/assets/imgs/serv-icons/18.png" alt="Relações de Confiança" />
+              </div>
+              <h5 style={{ textTransform: 'uppercase' }}>
+                Menos desgaste emocional
+              </h5>
+              <div className="text mt-20">
+                <p>
+                  Reduza o impacto emocional das pressões do dia a dia, aprendendo a regular reações automáticas e a lidar melhor com situações difíceis.
+                  Você ganha mais equilíbrio, energia e estabilidade para sustentar sua rotina de liderança.
+                </p>
+              </div>
+              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
+                <a
+                  href="#"
+                  className=""
+                  data-bs-toggle="modal"
+                  data-bs-target="#formMultiStepModal"
+                >
+                  <span className="ti-arrow-top-right"></span>
+                </a>
+                <h6 className="fw-200 fs-2">Workshop introdutório</h6>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="col-lg-4" style={{ marginBottom: '30px' }}>
             <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
                 <img src="/assets/imgs/serv-icons/9.png" alt="Relações de Confiança" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Construção de relações de confiança e colaboração
+                Relações mais saudáveis e produtivas
               </h5>
               <div className="text mt-20">
                 <p>
-                  Crie times mais engajados e ambientes de alta confiança sem precisar recorrer
-                  a cobrança constante ou manipulação.
-                  Aprenda a escutar de verdade e a expressar necessidades de forma que as pessoas queiram colaborar.
+                  Construa vínculos baseados em confiança, escuta real e colaboração genuína.
+                  As relações se tornam mais leves, os conflitos mais construtivos e o ambiente mais propício a resultados consistentes.
                 </p>
               </div>
-              <div className="flex align-items-center mt-40 justify-content-between">
+              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
                   href="#"
                   className=""
