@@ -72,12 +72,9 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">Para quem é</span>
-                    {' '}este workshop
+                    <span className="fw-200">Para </span>
+                    {' '}líderes que:
                   </h3>
-                  <h6 className="fw-200 mt-10 fz-15">
-                    Para líderes que:
-                  </h6>
                   <ul className="mt-20 pt-list fz-12">
                     <li>Sentem o peso da responsabilidade e da pressão por resultados;</li>
                     <br />
@@ -85,7 +82,7 @@ function Portfolio() {
                     <br />
                     <li>Querem se comunicar melhor, gerar engajamento e reduzir conflitos;</li>
                     <br />
-                    <li>Desejam liderar pessoas sem se perder de si mesmos.</li>
+                    <li>Desejam liderar pessoas sem abrir mão de sua autenticidade.</li>
                   </ul>
 
                   <div className="mt-20">
@@ -132,6 +129,9 @@ function Portfolio() {
                   <h6 className="fw-200 fz-15">
                     <span className='fw-600'>O resultado?</span>
                     {' '}Mais controle, mais desgaste, menos confiança e equipes pouco engajadas.
+                    <br />
+                    <br />
+                    <span className='fw-600'>Você também se sente assim?</span>
                   </h6>
 
                   <div className="mt-20">
@@ -167,7 +167,7 @@ function Portfolio() {
                     Este workshop convida o líder a pausar, olhar para si e ampliar sua consciência, para então liderar com mais clareza, empatia e intencionalidade.
                     <br />
                     <br />
-                    <span className='fw-600'>Ao longo dos encontros, o participante desenvolve uma liderança que:</span>
+                    <span className='fw-600'>Ao longo dos encontros, o participantes desenvolverá uma liderança que:</span>
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
                     <li>Substitui o controle pela confiança;</li>
@@ -178,7 +178,7 @@ function Portfolio() {
                     <br />
                     <li>Gera engajamento genuíno;</li>
                     <br />
-                    <li>Entrega resultados de forma sustentável.</li>
+                    <li>Sai do operacional e assume de fato o papel de líder.</li>
                   </ul>
 
 
@@ -263,9 +263,6 @@ function Portfolio() {
                     <br />
                     <br />
                     <span className='fw-600'>O foco não é apenas entender conceitos, mas incorporar novas formas de pensar, sentir e agir como líder.</span>
-                    <br />
-                    <br />
-                    Incluir o output do encontro (o que será aplicável após o encontro? o que eu faço com isso, como vou aplicar isso no meu a dia-a-dia, objetivo de aprendizagem do encontro, algo que a pessoa se veja vivendo, o efeito que quero gerar)
                   </h6>
 
                   <div className="mt-20">

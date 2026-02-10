@@ -1,6 +1,10 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import LeadFormModal from './LeadFormModal';
 
 function About() {
+  const [openForm, setOpenForm] = useState(false);
+
   return (
     <section className="about-author mb-80 pt-20">
       <div className="container with-pad">
@@ -26,61 +30,57 @@ function About() {
                 </h4>
 
                 <p>
-                  Atuei por duas décadas em Recursos Humanos, com forte atuação em Aprendizagem & Desenvolvimento em empresas como <strong>Natura&Co</strong> e <strong>Aramis</strong>.
-                  Acompanhei de perto líderes, equipes e organizações em momentos de crescimento acelerado, fusões, reestruturações e grandes transformações culturais.
+                  Atuei por duas décadas em Recursos Humanos, com forte atuação em Aprendizagem & Desenvolvimento em empresas como <strong>Natura&Co</strong> e <strong>Aramis</strong>. Acompanhei de perto líderes, equipes e organizações em momentos de crescimento acelerado, fusões, reestruturações e grandes transformações culturais.
                 </p>
                 <br />
                 <p>
-                  Uma vivência de alguns anos em Nova York mudou completamente minha visão sobre relações humanas. Foi lá que mergulhei profundamente na <strong>Comunicação Não Violenta (CNV)</strong>,
-                  participando do International Intensive Training pelo Center for Nonviolent Communication e de diversas formações avançadas.
+                  Uma experiência internacional morando em Nova York ampliou minha visão sobre relações humanas. Foi lá que mergulhei na <strong>Comunicação Não Violenta (CNV)</strong>, participando do International Intensive Training pelo Center for Nonviolent Communication e desde então me venho me dedicando ao estudo e aplicação da CNV no meu dia-a-dia.
                 </p>
                 <br />
                 <p className="mb-10">
-                  Hoje uno essa experiência corporativa sólida com a profundidade da CNV para ajudar líderes a construírem uma <strong>liderança mais consciente, presente e humana</strong> —
-                  sem perder estratégia, resultados ou autenticidade.
+                  Hoje uno essa experiência corporativa com a profundidade da CNV para ajudar líderes a construírem uma <strong>liderança mais consciente, presente e humana</strong> — sem perder estratégia, resultados ou autenticidade.
                 </p>
                 <br />
-                <div className="numbers mt-10">
-                  <div className="row lg-marg">
-                    <div className="col-md-6">
-                      <div className="item bord-thin-top pt-30 d-flex align-items-end mt-20">
-                        <div>
-                          <h3 className="fw-300 mb-10">+20 ANOS</h3>
-                          <h6 className="p-color sub-title">
-                            em Recursos Humanos e Desenvolvimento de Líderes
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="item bord-thin-top pt-30 d-flex align-items-end mt-20">
-                        <div>
-                          <h3 className="fw-300 mb-10">Formação Internacional</h3>
-                          <h6 className="p-color sub-title">
-                            em Comunicação Não Violenta (CNV)
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="d-flex flex-wrap" style={{ gap: '20px' }}>
+
+                  <a
+                    href="https://www.linkedin.com/in/priscila"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center"
+                  >
+                    <i className="fab fa-linkedin-in" style={{ paddingRight: '10px' }}></i>
+                    <span>LinkedIn Profissional</span>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/priscila"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center gap-10"
+                  >
+                    <i className="fab fa-instagram" style={{ paddingRight: '10px' }}></i>
+                    <span>Instagram</span>
+                  </a>
+
                 </div>
 
                 <div className="d-flex align-items-center mt-60">
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => setOpenForm(true)}
                     className="butn butn-md butn-bord main-color radius-30"
-                    data-bs-toggle="modal"
-                    data-bs-target="#formMultiStepModal"
                   >
-                    Quero conhecer o Workshop da Priscila
+                    Workshop Liderança Consciente
                     <i className="fas fa-arrow-right" style={{ fontSize: '18px', marginLeft: '10px' }}></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* MODAL */}
+      <LeadFormModal open={openForm} onClose={() => setOpenForm(false)} />
     </section>
   );
 }

@@ -39,14 +39,14 @@ function WorkshopTimeline() {
     }, []);
 
     const encontros = [
-        { icon: <FaBrain />, title: 'Consciência de Si', output: 'Clareza sobre quem você é e o seu papel como líder.' },
-        { icon: <FaBolt />, title: 'Liderar sob Pressão', output: 'Menos reatividade, mais escolha consciente.' },
-        { icon: <FaProjectDiagram />, title: 'Do Controle à Confiança', output: 'Delegação segura e autonomia no time.' },
-        { icon: <FaHeart />, title: 'Empatia na Liderança', output: 'Conexões que geram engajamento real.' },
-        { icon: <FaComments />, title: 'Comunicação Autêntica', output: 'Clareza, responsabilidade e menos ruído.' },
-        { icon: <FaHandshakeSlash />, title: 'Gestão de Conflitos', output: 'Transformar tensões em colaboração.' },
-        { icon: <FaBullseye />, title: 'Feedback Consciente', output: 'Conversas que desenvolvem pessoas.' },
-        { icon: <FaChartLine />, title: 'Sustentando a Liderança', output: 'Plano prático para aplicar no dia a dia.' },
+        { icon: <FaBrain />, event: 'Encontro 1', title: 'Consciência de Si', output: 'Clareza sobre quem você é e o seu papel como líder.' },
+        { icon: <FaBolt />, event: 'Encontro 2', title: 'Liderar sob Pressão', output: 'Menos reatividade, mais escolha consciente.' },
+        { icon: <FaProjectDiagram />, event: 'Encontro 3', title: 'Do Controle à Confiança', output: 'Delegação segura e autonomia no time.' },
+        { icon: <FaHeart />, event: 'Encontro 4', title: 'Empatia na Liderança', output: 'Conexões que geram engajamento real.' },
+        { icon: <FaComments />, event: 'Encontro 5', title: 'Comunicação Autêntica', output: 'Clareza, responsabilidade e menos ruído.' },
+        { icon: <FaHandshakeSlash />, event: 'Encontro 6', title: 'Gestão de Conflitos', output: 'Transformar tensões em colaboração.' },
+        { icon: <FaBullseye />, event: 'Encontro 7', title: 'Feedback Consciente', output: 'Conversas que desenvolvem pessoas.' },
+        { icon: <FaChartLine />, event: 'Encontro 8', title: 'Sustentando a Liderança', output: 'Plano prático para aplicar no dia a dia.' },
     ];
 
     return (
@@ -128,8 +128,11 @@ function WorkshopTimeline() {
                     <div className="timeline-cards premium">
                         {encontros.map((item, index) => (
                             <div className="timeline-card premium" key={index}>
-                                <div className="timeline-icon">
-                                    {item.icon}
+                                <div className='d-flex align-items-center' style={{gap:'20px'}}>
+                                    <div className="timeline-icon">
+                                        {item.icon}
+                                    </div>
+                                    <h4 className='fz-20 fw-200'>{item.event}</h4>
                                 </div>
                                 <h5>{item.title}</h5>
                                 <p>{item.output}</p>

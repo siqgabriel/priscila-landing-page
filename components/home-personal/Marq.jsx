@@ -3,7 +3,7 @@ import React from 'react';
 function Marq() {
   const items = [
     "Liderança com mais presença e menos desgaste",
-    "Converse difícil sem romper a confiança",
+    "Conversas difíceis sem romper a confiança",
     "Clareza emocional mesmo sob pressão",
     "Resultados reais sem sacrificar as pessoas",
   ];

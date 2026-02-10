@@ -1708,7 +1708,7 @@ figure {
 
 .ontop {
   position: relative;
-  z-index: 7;
+  z-index: 0;
 }
 
 .rest {
@@ -4901,6 +4901,7 @@ footer.clean-footer.crev:after {
   right: 40px;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 footer.clean-footer.crev .circle-blur {
@@ -8268,7 +8269,7 @@ footer.clean-footer.crev .circle-blur {
     font-size: 40px !important;
   }
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   h2 {
     font-size: 34px;
@@ -8873,7 +8874,6 @@ footer.clean-footer.crev .circle-blur {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
 }
 
 .timeline-icon svg {
@@ -8959,7 +8959,6 @@ footer.clean-footer.crev .circle-blur {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
 }
 
 .timeline-icon svg {
@@ -8994,4 +8993,71 @@ footer.clean-footer.crev .circle-blur {
   color: #4254b0;
 } 
 
+/* SOCIAL BUTTON - PRISCILA */
+.butn-social-priscila {
+  border: 1px solid #4254b0;
+  background: #4254b0;
+  color: #fff;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(66, 84, 176, 0.25);
+}
 
+.butn-social-priscila:hover {
+  border-color: #4254b0;
+  background: #fff;
+  color: #4254b0;
+  box-shadow: 0 12px 30px rgba(66, 84, 176, 0.15);
+}
+
+
+/* BOTÃO CARTÃO — BORDA AZUL */
+.butn-outline-blue {
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.butn-outline-blue:hover {
+  background: #ffffff;
+  color: #4254b0;
+}
+
+/* PIX MODAL */
+.pix-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.pix-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.pix-modal-box {
+  position: relative;
+  max-width: 420px;
+  margin: 10vh auto;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* QR CODE */
+.pix-qrcode-wrap {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.pix-qrcode-img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+}

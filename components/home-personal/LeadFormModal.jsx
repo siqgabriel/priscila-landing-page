@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 
 function LeadFormModal({ open, onClose }) {
   const [step, setStep] = useState(1);
+  const [openPix, setOpenPix] = useState(false);
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -202,9 +203,7 @@ function LeadFormModal({ open, onClose }) {
         {step === 4 && (
           <div className="lead-step-success">
             <div className="success-icon-wrap">
-              <div className="success-icon">
-                ✓
-              </div>
+              <div className="success-icon">✓</div>
             </div>
 
             <h5 className="text-1 mt-20 mb-10">
@@ -215,12 +214,25 @@ function LeadFormModal({ open, onClose }) {
               Sua inscrição foi registrada. Agora finalize sua vaga realizando o pagamento.
             </p>
 
-            {/* BOTÃO PRINCIPAL */}
-            <button className="butn butn-md radius-30 w-100 success-pay-btn">
-              Finalizar pagamento
+            {/* BOTÃO PRINCIPAL — PIX */}
+            <button
+              className="butn butn-md radius-30 w-100 success-pay-btn mb-15"
+              onClick={() => setOpenPix(true)}
+            >
+              💙 Pagar no PIX (10% de desconto)
             </button>
 
-            {/* BOTÃO SECUNDÁRIO */}
+            {/* BOTÃO CARTÃO — BORDA AZUL */}
+            <a
+              href="https://www.asaas.com/c/ihrq2yhz4ux3kcah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="butn butn-md radius-30 w-100 butn-outline-blue mb-20"
+            >
+              Continuar para pagamento com cartão
+            </a>
+
+            {/* WHATSAPP — MANTIDO */}
             <a
               href="https://wa.me/5511981884999"
               target="_blank"
@@ -230,7 +242,35 @@ function LeadFormModal({ open, onClose }) {
             </a>
           </div>
         )}
+
       </div>
+      {openPix && (
+        <div className="pix-modal">
+          <div className="pix-modal-overlay" onClick={() => setOpenPix(false)}></div>
+
+          <div className="pix-modal-box main-bg-dark">
+            <button className="lead-modal-close" onClick={() => setOpenPix(false)}>×</button>
+
+            <h5 className="text-1 mb-10">Pagamento via PIX</h5>
+            <p className="p1 mb-20">
+              Escaneie o QR Code abaixo para concluir o pagamento com 10% de desconto.
+            </p>
+
+            {/* IMAGEM DO QR CODE — VOCÊ VAI SUBSTITUIR */}
+            <div className="pix-qrcode-wrap">
+              <img
+                src="/pix-qrcode-placeholder.png"
+                alt="QR Code PIX"
+                className="pix-qrcode-img"
+              />
+            </div>
+
+            <p className="p1 mt-20">
+              Após o pagamento, sua vaga será confirmada automaticamente.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

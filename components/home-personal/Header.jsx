@@ -39,14 +39,14 @@ function Header() {
                   <span className="icon-img-30">
                     <img src="/assets/imgs/header/star.png" alt="" />
                   </span>{' '}
-                  Para líderes que já cansaram de<br />cobrar performance sem conexão
+                  Workshop Liderança Consciente
                 </h6>
 
-                <h1 className="fw-700 mb-10" >
-                  Resultados consistentes
+                <h1 className="fw-200 mb-10" >
+                  Lidere com
                   <br />
-                  sem desgaste:
-                  <span className="main-color" style={{ textShadow: '0px 0px 15px #a2b7e3' }}> uma liderança.</span>
+                  mais segurança e
+                  <span className="main-color fw-700" style={{ textShadow: '0px 0px 15px #a2b7e3' }}>menos desgaste emocional.</span>
                 </h1>
 
                 <div className="text mt-10">
