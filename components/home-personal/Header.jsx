@@ -35,8 +35,8 @@ function Header() {
           <div className="row">
             <div className="col-15 col-lg-8">
               <div className="caption">
-                <h6 className="mb-15">
-                  <span className="icon-img-30">
+                <h6 className="mb-15" style={{ textTransform: 'uppercase' }}>
+                  <span className="icon-img-50">
                     <img src="/assets/imgs/header/star.png" alt="" />
                   </span>{' '}
                   Workshop Liderança Consciente

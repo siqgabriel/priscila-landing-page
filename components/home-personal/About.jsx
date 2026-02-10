@@ -68,7 +68,7 @@ function About() {
                 <div className="d-flex align-items-center mt-60">
                   <button
                     onClick={() => setOpenForm(true)}
-                    className="butn butn-md butn-bord main-color radius-30"
+                    className="butn butn-md butn-bord radius-30"
                   >
                     Workshop Liderança Consciente
                     <i className="fas fa-arrow-right" style={{ fontSize: '18px', marginLeft: '10px' }}></i>

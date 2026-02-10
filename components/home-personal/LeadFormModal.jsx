@@ -259,7 +259,7 @@ function LeadFormModal({ open, onClose }) {
             {/* IMAGEM DO QR CODE — VOCÊ VAI SUBSTITUIR */}
             <div className="pix-qrcode-wrap">
               <img
-                src="/pix-qrcode-placeholder.png"
+                src="\assets\imgs\QRCODE.png"
                 alt="QR Code PIX"
                 className="pix-qrcode-img"
               />

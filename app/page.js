@@ -11,6 +11,7 @@ import Marq from '@/components/home-personal/Marq';
 import About from '@/components/home-personal/About';
 import Services from '@/components/home-personal/Services';
 import Portfolio from '@/components/home-personal/Portfolio';
+import InvestmentSection from '@/components/home-personal/InvestmentSection';
 
 export const metadata = {
   title: 'Priscila Milanese',
@@ -41,6 +42,7 @@ export default function Home() {
             <Portfolio />
             <Services />
             <WorkshopTimeline />
+            <InvestmentSection />
             <About />
           </main>
           <Footer />
