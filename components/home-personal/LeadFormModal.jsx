@@ -5,6 +5,20 @@ import { gsap } from 'gsap';
 function LeadFormModal({ open, onClose }) {
   const [step, setStep] = useState(1);
   const [openPix, setOpenPix] = useState(false);
+  const [pixCopied, setPixCopied] = useState(false);
+  const pixCode = 'c2a3d5e3-8b9d-4b49-b77a-f19af47e413b';
+  const handleCopyPix = async () => {
+    try {
+      await navigator.clipboard.writeText(pixCode);
+      setPixCopied(true);
+
+      setTimeout(() => {
+        setPixCopied(false);
+      }, 3000);
+    } catch (err) {
+      console.error('Erro ao copiar PIX', err);
+    }
+  };
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -256,13 +270,31 @@ function LeadFormModal({ open, onClose }) {
               Escaneie o QR Code abaixo para concluir o pagamento com 10% de desconto.
             </p>
 
-            {/* IMAGEM DO QR CODE — VOCÊ VAI SUBSTITUIR */}
-            <div className="pix-qrcode-wrap">
+            {/* QR CODE — DESKTOP */}
+            <div className="pix-qrcode-wrap desktop-only">
               <img
-                src="\assets\imgs\QRCODE.png"
+                src="/assets/imgs/QRCODE.png"
                 alt="QR Code PIX"
                 className="pix-qrcode-img"
               />
+            </div>
+
+            {/* MOBILE — COPIAR CÓDIGO */}
+            <div className="mobile-only pix-copy-wrap">
+              <p className="p1 mb-10">
+                No celular, copie o código PIX abaixo:
+              </p>
+
+              <div className="pix-code-box">
+                <code>{pixCode}</code>
+              </div>
+
+              <button
+                className="butn butn-md radius-30 w-100 success-pay-btn mt-15"
+                onClick={handleCopyPix}
+              >
+                {pixCopied ? '✅ Código PIX copiado!' : '📋 Copiar código PIX'}
+              </button>
             </div>
 
             <p className="p1 mt-20">
@@ -271,6 +303,7 @@ function LeadFormModal({ open, onClose }) {
           </div>
         </div>
       )}
+
     </div>
   );
 }

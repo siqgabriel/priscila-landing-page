@@ -9178,3 +9178,48 @@ footer.clean-footer.crev .circle-blur {
     font-size: 44px;
   }
 }
+
+/* ==========================
+   VISIBILIDADE MOBILE / DESKTOP
+========================== */
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* ==========================
+   PIX CODE MOBILE
+========================== */
+
+.pix-copy-wrap {
+  text-align: center;
+}
+
+.pix-code-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(66,84,176,0.5);
+  border-radius: 12px;
+  padding: 12px 10px;
+  margin: 10px 0;
+  word-break: break-all;
+}
+
+.pix-code-box code {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}

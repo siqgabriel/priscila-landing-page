@@ -44,7 +44,7 @@ function About() {
                 <div className="d-flex flex-wrap" style={{ gap: '20px' }}>
 
                   <a
-                    href="https://www.linkedin.com/in/priscila"
+                    href="https://www.linkedin.com/in/priscilamilanese-mentora/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center"
@@ -54,7 +54,7 @@ function About() {
                   </a>
 
                   <a
-                    href="https://www.instagram.com/priscila"
+                    href="https://www.instagram.com/primila/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center gap-10"
