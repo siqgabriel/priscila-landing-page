@@ -84,9 +84,9 @@ function Header() {
 
                 <div className="text mt-10">
                   <p className="p1">
-                    Descubra como exercer uma liderança que equilibra pessoas e performance,{' '}
+                    Descubra como exercer uma liderança que equilibra pessoas e performance, {' '}
                     <strong>
-                      usando ferramentas da Comunicação Não Violenta que já transformaram centenas de líderes em grandes empresas.
+                      através da Comunicação Não Violenta, uma abordagem que já transformou centenas de líderes no mundo todo.
                     </strong>
                   </p>
                 </div>
