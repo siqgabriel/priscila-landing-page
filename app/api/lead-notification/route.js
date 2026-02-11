@@ -49,26 +49,6 @@ export async function POST(req) {
       }
     }
 
-    const recaptchaRes = await fetch(
-      'https://www.google.com/recaptcha/api/siteverify',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-      }
-    );
-
-    const recaptchaData = await recaptchaRes.json();
-
-    if (!recaptchaData.success) {
-      console.error('reCAPTCHA failed:', recaptchaData);
-      return NextResponse.json(
-        { error: 'Falha na verificação do reCAPTCHA' },
-        { status: 403 }
-      );
-    }
 
     // =========================
     // SMTP TRANSPORT
