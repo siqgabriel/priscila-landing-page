@@ -14,7 +14,19 @@ import Portfolio from '@/components/home-personal/Portfolio';
 import InvestmentSection from '@/components/home-personal/InvestmentSection';
 
 export const metadata = {
-  title: 'Priscila Milanese',
+  title: 'Workshop Liderança Consciente',
+  description: 'Lidere com mais segurança e menos desgaste emocional.',
+  openGraph: {
+    title: 'Workshop Liderança Consciente',
+    description: 'Lidere com mais segurança e menos desgaste emocional.',
+    images: [
+      {
+        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
