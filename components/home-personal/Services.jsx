@@ -25,7 +25,7 @@ function Services() {
           <div className="col-lg-4" style={{ marginBottom: '30px' }}>
             <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
-                <img src="/assets/imgs/serv-icons/7.png" alt="Conversas Difíceis" />
+                <img src="/assets/imgs/serv-icons/19.png" alt="Conversas Difíceis" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
                 Mais segurança para liderar
@@ -38,14 +38,12 @@ function Services() {
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
-                  href="#"
-                  className=""
-                  data-bs-toggle="modal"
-                  data-bs-target="#formMultiStepModal"
+                  href="#preco"
+                  className="scroll-to-price"
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Workshop introdutório</h6>
+                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
               </div>
             </div>
           </div>
@@ -54,7 +52,7 @@ function Services() {
           <div className="col-lg-4" style={{ marginBottom: '30px' }}>
             <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
-                <img src="/assets/imgs/serv-icons/8.png" alt="Liderança Consciente" />
+                <img src="/assets/imgs/serv-icons/20.png" alt="Liderança Consciente" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
                 Mais clareza para se posicionar
@@ -69,14 +67,12 @@ function Services() {
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
-                  href="#"
-                  className=""
-                  data-bs-toggle="modal"
-                  data-bs-target="#formMultiStepModal"
+                  href="#preco"
+                  className="scroll-to-price"
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Workshop introdutório</h6>
+                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
               </div>
             </div>
           </div>
@@ -85,7 +81,7 @@ function Services() {
           <div className="col-lg-4" style={{ marginBottom: '30px' }}>
             <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
-                <img src="/assets/imgs/serv-icons/18.png" alt="Relações de Confiança" />
+                <img src="/assets/imgs/serv-icons/21.png" alt="Relações de Confiança" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
                 Menos desgaste emocional
@@ -98,14 +94,12 @@ function Services() {
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
-                  href="#"
-                  className=""
-                  data-bs-toggle="modal"
-                  data-bs-target="#formMultiStepModal"
+                  href="#preco"
+                  className="scroll-to-price"
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Workshop introdutório</h6>
+                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
               </div>
             </div>
           </div>
@@ -114,7 +108,7 @@ function Services() {
           <div className="col-lg-4" style={{ marginBottom: '30px' }}>
             <div className="item sub-bg-card">
               <div className="icon-img-serv mb-40">
-                <img src="/assets/imgs/serv-icons/9.png" alt="Relações de Confiança" />
+                <img src="/assets/imgs/serv-icons/22.png" alt="Relações de Confiança" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
                 Relações mais saudáveis e produtivas
@@ -127,14 +121,12 @@ function Services() {
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
                 <a
-                  href="#"
-                  className=""
-                  data-bs-toggle="modal"
-                  data-bs-target="#formMultiStepModal"
+                  href="#preco"
+                  className="scroll-to-price"
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Workshop introdutório</h6>
+                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
               </div>
             </div>
           </div>

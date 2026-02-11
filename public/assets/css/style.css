@@ -13,6 +13,10 @@
 -----------------------------------------------------------------*/
 /* Typography
 -----------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5236,7 +5240,7 @@ footer.clean-footer.crev .circle-blur {
   height: 80vw;
   background: -webkit-radial-gradient(circle, #ffffff 0%, transparent 66%);
   background: -o-radial-gradient(circle, #ffffff 0%, transparent 66%);
-  background: radial-gradient(circle, #a2b7e3 0%, transparent 66%);
+  background: radial-gradient(circle, #3f51b5 0%, transparent 66%);
   opacity: 0.5;
   z-index: 2;
 }

@@ -6,7 +6,7 @@ function InvestmentSection() {
     const [openForm, setOpenForm] = useState(false);
 
     return (
-        <section className="investment-section section-padding">
+        <section className="investment-section section-padding" id='preco'>
             <div className="container">
 
                 {/* HEADER */}

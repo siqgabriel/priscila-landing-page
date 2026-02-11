@@ -6,6 +6,27 @@ import LeadFormModal from './LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
+  const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila.png');
+
+  // Detecta tamanho da tela e define imagem correta
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 440) {
+        setBgImage('/assets/imgs/header/priscila-mobile.png');
+      } else if (width >= 440 && width < 768) {
+        setBgImage('/assets/imgs/header/priscila-mobile2.png');
+      } else {
+        setBgImage('/assets/imgs/header/priscila.png');
+      }
+    };
+
+    handleResize(); // inicial
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useLayoutEffect(() => {
     const tl = gsap.timeline();
@@ -20,38 +41,50 @@ function Header() {
     return () => tl.kill();
   }, []);
 
+  // Reaplica background quando muda a imagem
   useEffect(() => {
     loadBackgroudImages();
-  }, []);
+  }, [bgImage]);
 
   return (
     <>
       <div
         className="header header-personal valign bg-img"
-        data-background="/assets/imgs/header/priscila.png"
+        data-background={bgImage}
         data-overlay-dark="2"
       >
         <div className="container ontop">
           <div className="row">
             <div className="col-15 col-lg-8">
               <div className="caption">
-                <h6 className="mb-15" style={{ textTransform: 'uppercase' }}>
-                  <span className="icon-img-50">
+                <div className='flex align-items-center'>
+                  <span className="icon-img-50 mr-10">
                     <img src="/assets/imgs/header/star.png" alt="" />
-                  </span>{' '}
-                  Workshop Liderança Consciente
-                </h6>
+                  </span>
+                  <h6 className="" style={{ textTransform: 'uppercase', textAlign: 'left' }}>
+                    Workshop
+                    <br />
+                    Liderança
+                    <br />
+                    Consciente
+                  </h6>
+                </div>
 
-                <h1 className="fw-200 mb-10" >
+                <h1 className="fw-200 mb-10">
                   Lidere com
                   <br />
                   mais segurança e
-                  <span className="main-color fw-700" style={{ textShadow: '0px 0px 15px #a2b7e3' }}>menos desgaste emocional.</span>
+                  <span
+                    className="main-color fw-700"
+                    style={{ textShadow: '0px 0px 15px #a2b7e3' }}
+                  >
+                    menos desgaste emocional.
+                  </span>
                 </h1>
 
                 <div className="text mt-10">
                   <p className="p1">
-                    Descubra como exercer uma liderança que equilibra pessoas e performance, {' '}
+                    Descubra como exercer uma liderança que equilibra pessoas e performance,{' '}
                     <strong>
                       usando ferramentas da Comunicação Não Violenta que já transformaram centenas de líderes em grandes empresas.
                     </strong>
