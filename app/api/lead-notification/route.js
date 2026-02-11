@@ -52,12 +52,12 @@ export async function POST(req) {
     // =========================
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: false,
+      host: process.env.EMAIL_HOST,
+      port: Number(process.env.EMAIL_PORT),
+      secure: true,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       connectionTimeout: 10000,
       greetingTimeout: 10000,
@@ -128,7 +128,7 @@ export async function POST(req) {
     // =========================
 
     await transporter.sendMail({
-      from: `"Workshop Liderança" <${process.env.SMTP_FROM}>`,
+      from: `"Workshop Liderança" <${process.env.EMAIL_FROM}>`,
       to,
       subject,
       html,
