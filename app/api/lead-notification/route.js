@@ -7,9 +7,9 @@ export async function POST(req) {
 
     const {
       event,
-      name,
+      nome,
       email,
-      phone,
+      telefone,
       cpf,
       paymentId,
       recaptchaToken,
@@ -19,11 +19,34 @@ export async function POST(req) {
     // VALIDAR RECAPTCHA
     // =========================
 
-    if (!recaptchaToken) {
-      return NextResponse.json(
-        { error: 'reCAPTCHA token ausente' },
-        { status: 400 }
+    if (event === 'REGISTERED') {
+      if (!recaptchaToken) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA token ausente' },
+          { status: 400 }
+        );
+      }
+
+      const recaptchaRes = await fetch(
+        'https://www.google.com/recaptcha/api/siteverify',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        }
       );
+
+      const recaptchaData = await recaptchaRes.json();
+
+      if (!recaptchaData.success) {
+        console.error('reCAPTCHA failed:', recaptchaData);
+        return NextResponse.json(
+          { error: 'Falha na verificação do reCAPTCHA' },
+          { status: 403 }
+        );
+      }
     }
 
     const recaptchaRes = await fetch(
@@ -78,10 +101,9 @@ export async function POST(req) {
         <h2>Novo cadastro realizado</h2>
         <p><strong>Status:</strong> Pagamento pendente</p>
         <ul>
-          <li><strong>Nome:</strong> ${name}</li>
+          <li><strong>Nome:</strong> ${nome}</li>
           <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${phone}</li>
-          <li><strong>CPF:</strong> ${cpf}</li>
+          <li><strong>Telefone:</strong> ${telefone}</li>
         </ul>
       `;
     }
@@ -92,9 +114,9 @@ export async function POST(req) {
         <h2>PIX selecionado</h2>
         <p><strong>Status:</strong> Aguardando confirmação no Asaas</p>
         <ul>
-          <li><strong>Nome:</strong> ${name}</li>
+          <li><strong>Nome:</strong> ${nome}</li>
           <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${phone}</li>
+          <li><strong>Telefone:</strong> ${telefone}</li>
           <li><strong>CPF:</strong> ${cpf}</li>
           <li><strong>ID Asaas:</strong> ${paymentId || 'N/A'}</li>
         </ul>
@@ -107,9 +129,9 @@ export async function POST(req) {
         <h2>Cartão selecionado</h2>
         <p><strong>Status:</strong> Aguardando confirmação no Asaas</p>
         <ul>
-          <li><strong>Nome:</strong> ${name}</li>
+          <li><strong>Nome:</strong> ${nome}</li>
           <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${phone}</li>
+          <li><strong>Telefone:</strong> ${telefone}</li>
           <li><strong>CPF:</strong> ${cpf}</li>
           <li><strong>ID Asaas:</strong> ${paymentId || 'N/A'}</li>
         </ul>
