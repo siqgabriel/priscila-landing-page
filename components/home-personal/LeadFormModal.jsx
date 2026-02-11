@@ -1,12 +1,62 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import ReCAPTCHA from "react-google-recaptcha";
 
 function LeadFormModal({ open, onClose }) {
   const [step, setStep] = useState(1);
   const [openPix, setOpenPix] = useState(false);
   const [pixCopied, setPixCopied] = useState(false);
+  const recaptchaRef = useRef(null);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+
   const pixCode = 'c2a3d5e3-8b9d-4b49-b77a-f19af47e413b';
+
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    telefone: '',
+    nascimento: '',
+    cargo: '',
+    empresa: '',
+    tempoLider: '',
+    dores: '',
+    origem: ''
+  });
+
+  // =========================
+  // API HELPER
+  // =========================
+  const sendEmailEvent = async (eventType, recaptchaToken) => {
+    try {
+      const res = await fetch("/api/lead-notification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,      // seus dados do formulário
+          event: eventType, // IMPORTANTE: manter "event"
+          recaptchaToken,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error("API error:", data);
+        alert("Erro ao enviar inscrição. Tente novamente.");
+        return;
+      }
+
+    } catch (err) {
+      console.error("Fetch error:", err);
+      alert("Erro de conexão. Tente novamente.");
+    }
+  };
+
+  // =========================
+  // PIX COPY
+  // =========================
   const handleCopyPix = async () => {
     try {
       await navigator.clipboard.writeText(pixCode);
@@ -19,17 +69,6 @@ function LeadFormModal({ open, onClose }) {
       console.error('Erro ao copiar PIX', err);
     }
   };
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    nascimento: '',
-    cargo: '',
-    empresa: '',
-    tempoLider: '',
-    dores: '',
-    origem: ''
-  });
 
   useEffect(() => {
     if (open) {
@@ -54,7 +93,6 @@ function LeadFormModal({ open, onClose }) {
 
   if (!open) return null;
 
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -68,12 +106,8 @@ function LeadFormModal({ open, onClose }) {
 
         {/* HEADER DO MODAL */}
         <div className="lead-modal-head">
-          <h5 className="mb-5 text-1">
-            Garanta sua vaga
-          </h5>
-          <p className="p1">
-            Preencha seus dados para continuar sua inscrição.
-          </p>
+          <h5 className="mb-5 text-1">Garanta sua vaga</h5>
+          <p className="p1">Preencha seus dados para continuar sua inscrição.</p>
         </div>
 
         {/* STEPS INDICATOR */}
@@ -88,25 +122,10 @@ function LeadFormModal({ open, onClose }) {
           <div className="lead-step-webfolio">
             <h6 className="mb-20 text-1">Seus dados</h6>
 
-            <input
-              className="lead-input"
-              name="nome"
-              placeholder="Nome completo"
-              onChange={handleChange}
-            />
-            <input
-              className="lead-input"
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              onChange={handleChange}
-            />
-            <input
-              className="lead-input"
-              name="telefone"
-              placeholder="Telefone"
-              onChange={handleChange}
-            />
+            <input className="lead-input" name="nome" placeholder="Nome completo" onChange={handleChange} />
+            <input className="lead-input" type="email" name="email" placeholder="E-mail" onChange={handleChange} />
+            <input className="lead-input" name="telefone" placeholder="Telefone" onChange={handleChange} />
+
             <input
               className="lead-input"
               type="text"
@@ -116,14 +135,8 @@ function LeadFormModal({ open, onClose }) {
               value={formData.nascimento}
               onChange={(e) => {
                 let value = e.target.value.replace(/\D/g, '');
-
-                if (value.length > 2) {
-                  value = value.replace(/^(\d{2})(\d)/, '$1/$2');
-                }
-                if (value.length > 5) {
-                  value = value.replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
-                }
-
+                if (value.length > 2) value = value.replace(/^(\d{2})(\d)/, '$1/$2');
+                if (value.length > 5) value = value.replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
                 setFormData({ ...formData, nascimento: value });
               }}
             />
@@ -139,18 +152,8 @@ function LeadFormModal({ open, onClose }) {
           <div className="lead-step-webfolio">
             <h6 className="mb-20 text-1">Sua atuação</h6>
 
-            <input
-              className="lead-input"
-              name="cargo"
-              placeholder="Cargo atual e área"
-              onChange={handleChange}
-            />
-            <input
-              className="lead-input"
-              name="empresa"
-              placeholder="Empresa onde trabalha"
-              onChange={handleChange}
-            />
+            <input className="lead-input" name="cargo" placeholder="Cargo atual e área" onChange={handleChange} />
+            <input className="lead-input" name="empresa" placeholder="Empresa onde trabalha" onChange={handleChange} />
 
             <div className="lead-select-wrap">
               <select className="lead-input lead-select" name="tempoLider" onChange={handleChange}>
@@ -165,12 +168,8 @@ function LeadFormModal({ open, onClose }) {
             </div>
 
             <div className="lead-actions-webfolio">
-              <button className="butn butn-md butn-bord radius-30" onClick={() => setStep(1)}>
-                Voltar
-              </button>
-              <button className="butn butn-md butn-bord radius-30" onClick={() => setStep(3)}>
-                Continuar
-              </button>
+              <button className="butn butn-md butn-bord radius-30" onClick={() => setStep(1)}>Voltar</button>
+              <button className="butn butn-md butn-bord radius-30" onClick={() => setStep(3)}>Continuar</button>
             </div>
           </div>
         )}
@@ -189,7 +188,11 @@ function LeadFormModal({ open, onClose }) {
             />
 
             <div className="lead-select-wrap">
-              <select className="lead-input lead-select" name="origem" onChange={handleChange}>
+              <select
+                className="lead-input lead-select"
+                name="origem"
+                onChange={handleChange}
+              >
                 <option value="">Como ficou sabendo?</option>
                 <option>LinkedIn</option>
                 <option>Instagram</option>
@@ -199,19 +202,41 @@ function LeadFormModal({ open, onClose }) {
               <span className="lead-select-arrow"></span>
             </div>
 
+            {/* reCAPTCHA */}
+            <div style={{ marginTop: 20 }}>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={(token) => setRecaptchaToken(token)}
+              />
+            </div>
+
             <div className="lead-actions-webfolio">
-              <button className="butn butn-md butn-bord radius-30" onClick={() => setStep(2)}>
-                Voltar
-              </button>
               <button
                 className="butn butn-md butn-bord radius-30"
-                onClick={() => setStep(4)}
+                onClick={() => setStep(2)}
+              >
+                Voltar
+              </button>
+
+              <button
+                className="butn butn-md butn-bord radius-30"
+                onClick={async () => {
+                  if (!recaptchaToken) {
+                    alert("Confirme que você não é um robô.");
+                    return;
+                  }
+
+                  await sendEmailEvent("REGISTERED", recaptchaToken);
+                  setStep(4);
+                }}
               >
                 Finalizar inscrição
               </button>
             </div>
           </div>
         )}
+
 
         {/* STEP 4 — SUCESSO */}
         {step === 4 && (
@@ -220,44 +245,41 @@ function LeadFormModal({ open, onClose }) {
               <div className="success-icon">✓</div>
             </div>
 
-            <h5 className="text-1 mt-20 mb-10">
-              Cadastro realizado com sucesso!
-            </h5>
+            <h5 className="text-1 mt-20 mb-10">Cadastro realizado com sucesso!</h5>
 
             <p className="p1 mb-30">
               Sua inscrição foi registrada. Agora finalize sua vaga realizando o pagamento.
             </p>
 
-            {/* BOTÃO PRINCIPAL — PIX */}
+            {/* PIX */}
             <button
               className="butn butn-md radius-30 w-100 success-pay-btn mb-15"
-              onClick={() => setOpenPix(true)}
+              onClick={async () => {
+                await sendEmailEvent('PIX_SELECTED');
+                setOpenPix(true);
+              }}
             >
               💙 Pagar no PIX (10% de desconto)
             </button>
 
-            {/* BOTÃO CARTÃO — BORDA AZUL */}
+            {/* CARTÃO */}
             <a
               href="https://www.asaas.com/c/ihrq2yhz4ux3kcah"
               target="_blank"
               rel="noopener noreferrer"
               className="butn butn-md radius-30 w-100 butn-outline-blue mb-20"
+              onClick={() => sendEmailEvent('CARD_SELECTED')}
             >
               Continuar para pagamento com cartão
             </a>
 
-            {/* WHATSAPP — MANTIDO */}
-            <a
-              href="https://wa.me/5511981884999"
-              target="_blank"
-              className="success-whatsapp-link"
-            >
+            <a href="https://wa.me/5511981884999" target="_blank" className="success-whatsapp-link">
               Prefiro falar pelo WhatsApp
             </a>
           </div>
         )}
-
       </div>
+
       {openPix && (
         <div className="pix-modal">
           <div className="pix-modal-overlay" onClick={() => setOpenPix(false)}></div>
@@ -266,24 +288,14 @@ function LeadFormModal({ open, onClose }) {
             <button className="lead-modal-close" onClick={() => setOpenPix(false)}>×</button>
 
             <h5 className="text-1 mb-10">Pagamento via PIX</h5>
-            <p className="p1 mb-20">
-              Escaneie o QR Code abaixo para concluir o pagamento com 10% de desconto.
-            </p>
+            <p className="p1 mb-20">Escaneie o QR Code abaixo para concluir o pagamento com 10% de desconto.</p>
 
-            {/* QR CODE — DESKTOP */}
             <div className="pix-qrcode-wrap desktop-only">
-              <img
-                src="/assets/imgs/QRCODE.png"
-                alt="QR Code PIX"
-                className="pix-qrcode-img"
-              />
+              <img src="/assets/imgs/QRCODE.png" alt="QR Code PIX" className="pix-qrcode-img" />
             </div>
 
-            {/* MOBILE — COPIAR CÓDIGO */}
             <div className="mobile-only pix-copy-wrap">
-              <p className="p1 mb-10">
-                No celular, copie o código PIX abaixo:
-              </p>
+              <p className="p1 mb-10">No celular, copie o código PIX abaixo:</p>
 
               <div className="pix-code-box">
                 <code>{pixCode}</code>
@@ -297,13 +309,10 @@ function LeadFormModal({ open, onClose }) {
               </button>
             </div>
 
-            <p className="p1 mt-20">
-              Após o pagamento, sua vaga será confirmada automaticamente.
-            </p>
+            <p className="p1 mt-20">Após o pagamento, sua vaga será confirmada automaticamente.</p>
           </div>
         </div>
       )}
-
     </div>
   );
 }
