@@ -8875,7 +8875,7 @@ footer.clean-footer.crev .circle-blur {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #4b2f95, #4b2f95b3);
+  background: linear-gradient(135deg, #4b2f95, #4b2f959e);
   display: flex;
   align-items: center;
   justify-content: center;
