@@ -167,7 +167,7 @@ function Portfolio() {
                     Este workshop convida o líder a pausar, olhar para si e ampliar sua consciência, para então liderar com mais clareza, empatia e intencionalidade.
                     <br />
                     <br />
-                    <span className='fw-600'>Ao longo dos encontros, o participantes desenvolverá uma liderança que:</span>
+                    <span className='fw-600'>Ao longo dos encontros, o participante desenvolverá uma liderança que:</span>
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
                     <li>Substitui o controle pela confiança;</li>
