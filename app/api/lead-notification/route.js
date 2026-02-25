@@ -57,13 +57,14 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: Number(process.env.EMAIL_PORT),
-      secure: false,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
+      connectionTimeout: 30000,   // ← 30s
+      greetingTimeout: 30000,
+      socketTimeout: 30000,
     });
 
     const to = 'gabriel@operion.com.br';
@@ -140,8 +141,14 @@ export async function POST(req) {
 
   } catch (error) {
     console.error('Email API Error:', error);
+    console.error('Error name:', error.name);
+    console.error('Error code:', error.code);
+    console.error('Error message:', error.message);
+    if (error.response) {
+      console.error('SMTP response:', error.response);
+    }
     return NextResponse.json(
-      { error: 'Erro ao enviar email' },
+      { error: 'Erro ao enviar email', details: error.message },
       { status: 500 }
     );
   }
