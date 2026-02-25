@@ -67,7 +67,7 @@ export async function POST(req) {
       socketTimeout: 30000,
     });
 
-    const to = 'gabriel@operion.com.br';
+    const to = ['gabriel@operion.com.br', 'pri.milanese@gmail.com'];
 
     let subject = '';
     let html = '';
