@@ -34,7 +34,7 @@ function About() {
                 </p>
                 <br />
                 <p>
-                  Uma experiência internacional morando em Nova York ampliou minha visão sobre relações humanas. Foi lá que mergulhei na <strong>Comunicação Não Violenta (CNV)</strong>, participando do International Intensive Training pelo Center for Nonviolent Communication e desde então me venho me dedicando ao estudo e aplicação da CNV no meu dia-a-dia.
+                  Uma experiência internacional morando em Nova York ampliou minha visão sobre relações humanas. Foi lá que mergulhei na <strong>Comunicação Não Violenta (CNV)</strong>, participando do International Intensive Training pelo Center for Nonviolent Communication e desde então venho me dedicando ao estudo e aplicação da CNV no meu dia-a-dia.
                 </p>
                 <br />
                 <p className="mb-10">
@@ -50,7 +50,7 @@ function About() {
                     className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center"
                   >
                     <i className="fab fa-linkedin-in" style={{ paddingRight: '10px' }}></i>
-                    <span>LinkedIn Profissional</span>
+                    <span>LinkedIn</span>
                   </a>
 
                   <a
@@ -61,6 +61,16 @@ function About() {
                   >
                     <i className="fab fa-instagram" style={{ paddingRight: '10px' }}></i>
                     <span>Instagram</span>
+                  </a>
+
+                  <a
+                    href="https://wa.me/5511981017106?text=Ol%C3%A1%20Priscila!%20Vim%20pelo%20site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="butn butn-md radius-30 butn-social-priscila d-flex align-items-center gap-10"
+                  >
+                    <i className="fab fa-whatsapp" style={{ paddingRight: '10px' }}></i>
+                    <span>Whatsapp</span>
                   </a>
 
                 </div>

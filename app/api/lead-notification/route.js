@@ -75,48 +75,52 @@ export async function POST(req) {
     // =========================
     // TEMPLATES
     // =========================
-
     if (event === 'REGISTERED') {
       subject = '📝 Novo cadastro — Pagamento pendente';
+
       html = `
-        <h2>Novo cadastro realizado</h2>
-        <p><strong>Status:</strong> Pagamento pendente</p>
-        <ul>
-          <li><strong>Nome:</strong> ${nome}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${telefone}</li>
-        </ul>
-      `;
+    <h2>Novo cadastro realizado</h2>
+    <p><strong>Status:</strong> Pagamento pendente</p>
+    <ul>
+      <li><strong>Nome:</strong> ${nome || 'Não informado'}</li>
+      <li><strong>Email:</strong> ${email || 'Não informado'}</li>
+      <li><strong>Telefone:</strong> ${telefone || 'Não informado'}</li>
+      <li><strong>Data de nascimento:</strong> ${formData.nascimento || 'Não informado'}</li>
+      <li><strong>Cargo atual e área:</strong> ${formData.cargo || 'Não informado'}</li>
+      <li><strong>Empresa:</strong> ${formData.empresa || 'Não informado'}</li>
+      <li><strong>Tempo como líder:</strong> ${formData.tempoLider || 'Não informado'}</li>
+      <li><strong>Principais dores/dúvidas:</strong> ${formData.dores || 'Não informado'}</li>
+      <li><strong>Como ficou sabendo?:</strong> ${formData.origem || 'Não informado'}</li>
+    </ul>
+  `;
     }
 
     if (event === 'PIX_SELECTED') {
       subject = '💰 Pagamento via PIX selecionado';
       html = `
-        <h2>PIX selecionado</h2>
-        <p><strong>Status:</strong> Aguardando confirmação no Asaas</p>
-        <ul>
-          <li><strong>Nome:</strong> ${nome}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${telefone}</li>
-          <li><strong>CPF:</strong> ${cpf}</li>
-          <li><strong>ID Asaas:</strong> ${paymentId || 'N/A'}</li>
-        </ul>
-      `;
+    <h2>PIX selecionado</h2>
+    <p><strong>Status:</strong> Aguardando confirmação</p>
+    <ul>
+      <li><strong>Nome:</strong> ${nome || 'Não informado'}</li>
+      <li><strong>Email:</strong> ${email || 'Não informado'}</li>
+      <li><strong>Telefone:</strong> ${telefone || 'Não informado'}</li>
+    </ul>
+    <p><em>Observação: Pagamento manual via PIX (QR Code ou código copiado).</em></p>
+  `;
     }
 
     if (event === 'CARD_SELECTED') {
       subject = '💳 Pagamento via Cartão selecionado';
       html = `
-        <h2>Cartão selecionado</h2>
-        <p><strong>Status:</strong> Aguardando confirmação no Asaas</p>
-        <ul>
-          <li><strong>Nome:</strong> ${nome}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Telefone:</strong> ${telefone}</li>
-          <li><strong>CPF:</strong> ${cpf}</li>
-          <li><strong>ID Asaas:</strong> ${paymentId || 'N/A'}</li>
-        </ul>
-      `;
+    <h2>Cartão selecionado</h2>
+    <p><strong>Status:</strong> Aguardando confirmação no Asaas</p>
+    <ul>
+      <li><strong>Nome:</strong> ${nome || 'Não informado'}</li>
+      <li><strong>Email:</strong> ${email || 'Não informado'}</li>
+      <li><strong>Telefone:</strong> ${telefone || 'Não informado'}</li>
+    </ul>
+    <p><em>Link utilizado:</em> https://www.asaas.com/c/ihrq2yhz4ux3kcah</p>
+  `;
     }
 
     if (!subject) {
