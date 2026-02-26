@@ -10,8 +10,12 @@ export async function POST(req) {
       nome,
       email,
       telefone,
-      cpf,
-      paymentId,
+      nascimento = '',     // fallback vazio
+      cargo = '',
+      empresa = '',
+      tempoLider = '',
+      dores = '',
+      origem = '',
       recaptchaToken,
     } = body;
 
@@ -85,12 +89,12 @@ export async function POST(req) {
       <li><strong>Nome:</strong> ${nome || 'Não informado'}</li>
       <li><strong>Email:</strong> ${email || 'Não informado'}</li>
       <li><strong>Telefone:</strong> ${telefone || 'Não informado'}</li>
-      <li><strong>Data de nascimento:</strong> ${formData.nascimento || 'Não informado'}</li>
-      <li><strong>Cargo atual e área:</strong> ${formData.cargo || 'Não informado'}</li>
-      <li><strong>Empresa:</strong> ${formData.empresa || 'Não informado'}</li>
-      <li><strong>Tempo como líder:</strong> ${formData.tempoLider || 'Não informado'}</li>
-      <li><strong>Principais dores/dúvidas:</strong> ${formData.dores || 'Não informado'}</li>
-      <li><strong>Como ficou sabendo?:</strong> ${formData.origem || 'Não informado'}</li>
+      <li><strong>Data de nascimento:</strong> ${nascimento || 'Não informado'}</li>
+      <li><strong>Cargo atual e área:</strong> ${cargo || 'Não informado'}</li>
+      <li><strong>Empresa:</strong> ${empresa || 'Não informado'}</li>
+      <li><strong>Tempo como líder:</strong> ${tempoLider || 'Não informado'}</li>
+      <li><strong>Principais dores/dúvidas:</strong> ${dores || 'Não informado'}</li>
+      <li><strong>Como ficou sabendo?:</strong> ${origem || 'Não informado'}</li>
     </ul>
   `;
     }
