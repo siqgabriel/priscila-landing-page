@@ -57,7 +57,7 @@ function Header() {
           <div className="row">
             <div className="col-15 col-lg-8">
               <div className="caption">
-                <div className='flex align-items-center'>
+                {/* <div className='flex align-items-center'>
                   <span className="icon-img-50 mr-10">
                     <img src="/assets/imgs/header/star.png" alt="" />
                   </span>
@@ -68,25 +68,25 @@ function Header() {
                     <br />
                     Consciente
                   </h6>
-                </div>
+                </div> */}
 
                 <h1 className="fw-200 mb-10">
-                  Lidere com
+                  Lorem impsum
                   <br />
-                  mais segurança e
+                  aductus poles in
                   <span
                     className="main-color fw-700"
                     style={{ textShadow: '0px 0px 15px #a2b7e3' }}
                   >
-                    menos desgaste emocional.
+                    valorem opus cut golten
                   </span>
                 </h1>
 
                 <div className="text mt-10">
                   <p className="p1">
-                    Descubra como exercer uma liderança que equilibra pessoas e performance, {' '}
+                    Vestibulum vitae feugiat augue. Maecenas quam dolor, tempus nec sagittis id, pulvinar at turpis.{' '}
                     <strong>
-                      através da Comunicação Não Violenta, uma abordagem que já transformou centenas de líderes no mundo todo.
+                      Sed condimentum sagittis lectus nec molestie aenean enim diam, molestie a pellentesque quis.  
                     </strong>
                   </p>
                 </div>
@@ -96,7 +96,7 @@ function Header() {
                     onClick={() => setOpenForm(true)}
                     className="butn butn-md butn-bord radius-30"
                   >
-                    Garanta sua vaga agora
+                    Preencha o formulário
                   </button>
                 </div>
               </div>

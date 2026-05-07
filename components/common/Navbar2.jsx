@@ -42,7 +42,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo" href="/" style={{ width: '200px', padding: '10px 0', fontSize: '30px', color: 'white' }}>
+        <a className="logo" href="#" style={{ width: '200px', padding: '10px 0', fontSize: '30px', color: 'white' }}>
           <img src="/assets/imgs/header/logo3.png" alt="logo" />
         </a>
 
@@ -72,7 +72,7 @@ function Navbar() {
               className="nav-item dropdown"
             >
               <a
-                className="nav-link"
+                className="nav-link2"
                 href="/"
               >
                 <span className="rolling-text">Home</span>
@@ -84,7 +84,7 @@ function Navbar() {
               className="nav-item dropdown"
             >
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link2 dropdown-toggle"
                 data-toggle="dropdown"
                 href="#"
                 role="button"
@@ -102,17 +102,17 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/mentoria">
+              <a className="nav-link2" href="/mentoria">
                 <span className="rolling-text">Mentoria</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/consultoria">
+              <a className="nav-link2" href="/consultoria">
                 <span className="rolling-text">Consultoria</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/page-contact">
+              <a className="nav-link2" href="/page-contact">
                 <span className="rolling-text">Contato</span>
               </a>
             </li>

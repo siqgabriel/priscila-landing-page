@@ -54,10 +54,10 @@ function Portfolio() {
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>
-              <span className="sub-title mb-5">Workshop Liderança Consciente</span>
+              <span className="sub-title mb-5">Lorem ipsum dolor sit amet</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
-                  Para quem <span className="fw-200">é este workshop?</span>
+                  Lorem ipsum <span className="fw-200">dolor sit amet?</span>
                 </span>
               </h3>
             </div>
@@ -72,17 +72,17 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">Para </span>
-                    {' '}líderes que:
+                    <span className="fw-200">Lorem </span>
+                    {' '}ipsum dolor:
                   </h3>
                   <ul className="mt-20 pt-list fz-12">
-                    <li>Sentem o peso da responsabilidade e da pressão por resultados;</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit;</li>
                     <br />
-                    <li>Percebem que estão reagindo mais do que escolhendo como liderar;</li>
+                    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna;</li>
                     <br />
-                    <li>Querem se comunicar melhor, gerar engajamento e reduzir conflitos;</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco;</li>
                     <br />
-                    <li>Desejam liderar pessoas sem abrir mão de sua autenticidade.</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                   </ul>
 
                   <div className="mt-20">
@@ -90,7 +90,7 @@ function Portfolio() {
                       onClick={() => setOpenForm(true)}
                       className="butn butn-pt butn-bord radius-30"
                     >
-                      Inscreva-se no Workshop
+                      Lorem ipsum dolor
                     </button>
                   </div>
                 </div>
@@ -109,29 +109,29 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">O desafio real</span>
-                    {' '}da liderança hoje
+                    <span className="fw-200">Lorem ipsum</span>
+                    {' '}dolor sit amet
                   </h3>
 
                   <h6 className="fw-200 mt-10 fz-15">
-                    A maioria dos líderes foi preparada para entregar resultados, mas não para lidar com:
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore:
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
-                    <li>Emoções sob pressão;</li>
+                    <li>Lorem ipsum dolor;</li>
                     <br />
-                    <li>Conflitos interpessoais;</li>
+                    <li>Consectetur adipiscing;</li>
                     <br />
-                    <li>Conversas difíceis;</li>
+                    <li>Sed do eiusmod;</li>
                     <br />
-                    <li>Insegurança, cobrança e solidão do papel.</li>
+                    <li>Tempor incididunt ut labore.</li>
                   </ul>
 
                   <h6 className="fw-200 fz-15">
-                    <span className='fw-600'>O resultado?</span>
-                    {' '}Mais controle, mais desgaste, menos confiança e equipes pouco engajadas.
+                    <span className='fw-600'>Lorem ipsum?</span>
+                    {' '}Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                     <br />
                     <br />
-                    <span className='fw-600'>Você também se sente assim?</span>
+                    <span className='fw-600'>Ut enim ad minim veniam?</span>
                   </h6>
 
                   <div className="mt-20">
@@ -139,7 +139,7 @@ function Portfolio() {
                       onClick={() => setOpenForm(true)}
                       className="butn butn-pt butn-bord radius-30"
                     >
-                      Inscreva-se no Workshop
+                      Lorem ipsum dolor
                     </button>
                   </div>
                 </div>
@@ -158,36 +158,34 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">A proposta do</span>
-                    {' '}Workshop Liderança Consciente
+                    <span className="fw-200">Lorem ipsum</span>
+                    {' '}dolor sit amet consectetur
                   </h3>
 
-
                   <h6 className="fw-200 mt-10 fz-15">
-                    Este workshop convida o líder a pausar, olhar para si e ampliar sua consciência, para então liderar com mais clareza, empatia e intencionalidade.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     <br />
                     <br />
-                    <span className='fw-600'>Ao longo dos encontros, o participante desenvolverá uma liderança que:</span>
+                    <span className='fw-600'>Ut enim ad minim veniam, quis nostrud exercitation:</span>
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
-                    <li>Substitui o controle pela confiança;</li>
+                    <li>Lorem ipsum dolor sit amet;</li>
                     <br />
-                    <li>Comunica com clareza e responsabilidade;</li>
+                    <li>Consectetur adipiscing elit;</li>
                     <br />
-                    <li>Constrói relações sólidas;</li>
+                    <li>Sed do eiusmod tempor;</li>
                     <br />
-                    <li>Gera engajamento genuíno;</li>
+                    <li>Incididunt ut labore et dolore;</li>
                     <br />
-                    <li>Sai do operacional e assume de fato o papel de líder.</li>
+                    <li>Magna aliqua ut enim ad minim.</li>
                   </ul>
-
 
                   <div className="mt-20">
                     <button
                       onClick={() => setOpenForm(true)}
                       className="butn butn-pt butn-bord radius-30"
                     >
-                      Inscreva-se no Workshop
+                      Lorem ipsum dolor
                     </button>
                   </div>
                 </div>
@@ -206,22 +204,22 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">O que você irá</span>
-                    {' '}desenvolver na prática
+                    <span className="fw-200">Lorem ipsum</span>
+                    {' '}dolor sit amet
                   </h3>
 
                   <ul className="mt-20 pt-list fz-12">
-                    <li>Mais clareza emocional e tomada de decisão consciente;</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit;</li>
                     <br />
-                    <li>Comunicação mais objetiva, humana e assertiva;</li>
+                    <li>Sed do eiusmod tempor incididunt ut labore et dolore;</li>
                     <br />
-                    <li>Capacidade de lidar com pressão sem reagir impulsivamente;</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation;</li>
                     <br />
-                    <li>Relações de confiança com o time, pares e superiores;</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate;</li>
                     <br />
-                    <li>Feedbacks que desenvolvem, em vez de desgastar;</li>
+                    <li>Excepteur sint occaecat cupidatat non proident sunt;</li>
                     <br />
-                    <li>Uma liderança mais alinhada com seus valores e propósito.</li>
+                    <li>Culpa qui officia deserunt mollit anim id est laborum.</li>
                   </ul>
 
                   <div className="mt-20">
@@ -229,7 +227,7 @@ function Portfolio() {
                       onClick={() => setOpenForm(true)}
                       className="butn butn-pt butn-bord radius-30"
                     >
-                      Inscreva-se no Workshop
+                      Lorem ipsum dolor
                     </button>
                   </div>
                 </div>
@@ -248,21 +246,21 @@ function Portfolio() {
               <div className="col-lg-5">
                 <div className="cont">
                   <h3 className="fw-600">
-                    <span className="fw-200">Diferencial da </span>
-                    metodologia
+                    <span className="fw-200">Lorem ipsum </span>
+                    dolor sit
                   </h3>
 
                   <h6 className="fw-200 mt-10 fz-15">
-                    <span className='fw-600'>Aprendizado aplicado à sua realidade como líder.</span>
+                    <span className='fw-600'>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
                     <br />
                     <br />
-                    Os encontros unem teoria e prática de forma vivencial.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     <br />
                     <br />
-                    Cada participante trabalha a partir de situações reais do seu dia a dia, trazendo desafios concretos de liderança para reflexão, diálogo e prática guiada.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <br />
                     <br />
-                    <span className='fw-600'>O foco não é apenas entender conceitos, mas incorporar novas formas de pensar, sentir e agir como líder.</span>
+                    <span className='fw-600'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
                   </h6>
 
                   <div className="mt-20">
@@ -270,7 +268,7 @@ function Portfolio() {
                       onClick={() => setOpenForm(true)}
                       className="butn butn-pt butn-bord radius-30"
                     >
-                      Inscreva-se no Workshop
+                      Lorem ipsum dolor
                     </button>
                   </div>
                 </div>

@@ -8,11 +8,11 @@ function Services() {
           <div className="d-flex align-items-center">
             <div>
               <span className="sub-title main-color mb-5">
-                Você não sai apenas com mais conhecimento.
+                Lorem ipsum dolor sit amet
               </span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
-                  O que muda <span className="fw-200">depois do workshop</span>
+                  Lorem ipsum <span className="fw-200">dolor sit amet neque </span>
                 </span>
               </h3>
             </div>
@@ -28,12 +28,12 @@ function Services() {
                 <img src="/assets/imgs/serv-icons/19.png" alt="Conversas Difíceis" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Mais segurança para liderar
+                Lorem ipsum dolor sit amet
               </h5>
               <div className="text mt-20">
                 <p>
-                  Desenvolva confiança interna para tomar decisões, conduzir pessoas e sustentar sua posição mesmo em cenários desafiadores.
-                  Você passa a liderar com mais firmeza, menos dúvida e mais coerência entre o que sente, pensa e comunica.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
@@ -43,7 +43,7 @@ function Services() {
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
+                <h6 className="fw-200 fs-2">Lorem ipsum dolor!</h6>
               </div>
             </div>
           </div>
@@ -55,12 +55,12 @@ function Services() {
                 <img src="/assets/imgs/serv-icons/20.png" alt="Liderança Consciente" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Mais clareza para se posicionar
+                Consectetur adipiscing elit
               </h5>
               <div className="text mt-20">
                 <p>
-                  Aprenda a expressar limites, expectativas e opiniões com objetividade e respeito, sem medo de gerar conflito ou de ser mal interpretado.
-                  Sua comunicação se torna mais direta, alinhada e estratégica.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   <br />
                   <br />
                 </p>
@@ -72,7 +72,7 @@ function Services() {
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
+                <h6 className="fw-200 fs-2">Lorem ipsum dolor!</h6>
               </div>
             </div>
           </div>
@@ -84,12 +84,12 @@ function Services() {
                 <img src="/assets/imgs/serv-icons/21.png" alt="Relações de Confiança" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Menos desgaste emocional
+                Sed do eiusmod tempor
               </h5>
               <div className="text mt-20">
                 <p>
-                  Reduza o impacto emocional das pressões do dia a dia, aprendendo a regular reações automáticas e a lidar melhor com situações difíceis.
-                  Você ganha mais equilíbrio, energia e estabilidade para sustentar sua rotina de liderança.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                 </p>
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
@@ -99,7 +99,7 @@ function Services() {
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
+                <h6 className="fw-200 fs-2">Lorem ipsum dolor!</h6>
               </div>
             </div>
           </div>
@@ -111,12 +111,12 @@ function Services() {
                 <img src="/assets/imgs/serv-icons/22.png" alt="Relações de Confiança" />
               </div>
               <h5 style={{ textTransform: 'uppercase' }}>
-                Relações mais saudáveis e produtivas
+                Incididunt ut labore et dolore
               </h5>
               <div className="text mt-20">
                 <p>
-                  Construa vínculos baseados em confiança, escuta real e colaboração genuína.
-                  As relações se tornam mais leves, os conflitos mais construtivos e o ambiente mais propício a resultados consistentes.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
               </div>
               <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
@@ -126,7 +126,7 @@ function Services() {
                 >
                   <span className="ti-arrow-top-right"></span>
                 </a>
-                <h6 className="fw-200 fs-2">Garanta sua vaga agora!</h6>
+                <h6 className="fw-200 fs-2">Lorem ipsum dolor!</h6>
               </div>
             </div>
           </div>

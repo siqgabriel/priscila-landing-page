@@ -1,30 +1,21 @@
 import generateStylesheetObject from '@/common/generateStylesheetsObject';
 import Lines from '@/components/common/Lines';
 import ProgressScroll from '@/components/common/ProgressScroll';
+import Cursor from '@/components/common/cusor';
 import LoadingScreen from '@/components/common/loader';
 import Footer from '@/components/common/Footer';
-import Navbar from '@/components/common/Navbar';
+import Navbar2 from '@/components/common/Navbar2';
 import Script from 'next/script';
-import Header from '@/components/home-personal/Header';
-import Marq from '@/components/home-personal/Marq';
-import About from '@/components/home-personal/About';
-import Services from '@/components/home-personal/Services';
-import Portfolio from '@/components/home-personal/Portfolio';
+import Testimonials from '@/components/page-mentoria/Testimonials';
+import Header from '@/components/page-mentoria/Header';
+import Intro from '@/components/page-mentoria/Intro';
+import Numbers from '@/components/page-mentoria/Numbers';
+import Services from '@/components/page-mentoria/Services';
+import Pricing from '@/components/page-mentoria/Pricing';
+import Cta from '@/components/page-mentoria/Cta';
 
 export const metadata = {
-  title: 'Workshop Liderança Consciente',
-  description: 'Lidere com mais segurança e menos desgaste emocional.',
-  openGraph: {
-    title: 'Workshop Liderança Consciente',
-    description: 'Lidere com mais segurança e menos desgaste emocional.',
-    images: [
-      {
-        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
+  title: 'webfolio',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
@@ -39,23 +30,26 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <body className="home-personal">
+    <body>
       <LoadingScreen />
+      <Cursor />
       <ProgressScroll />
       <Lines />
-      <Navbar />
+      <Navbar2 />
+      <Header />
+      <Intro />
+      <Numbers />
+      <Services />
+      <Cta />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">
-            <Header />
-            <Marq />
-            <Portfolio />
-            <Services />
-            <About />
+
           </main>
           <Footer />
         </div>
       </div>
+
       <Script
         src="/assets/js/ScrollTrigger.min.js"
         strategy="beforeInteractive"

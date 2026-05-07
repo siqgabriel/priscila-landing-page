@@ -50,7 +50,7 @@ function WorkshopTimeline() {
     ];
 
     return (
-        <section className="workshop-timeline ">
+        <section className="workshop-timeline mt-80">
             <div className="container">
 
                 {/* HEADER */}
