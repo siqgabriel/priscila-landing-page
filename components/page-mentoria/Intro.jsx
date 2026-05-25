@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import LeadFormModal from '../home-personal/LeadFormModal';
 
 const beneficios = [
-  'Lorem ipsum dolor sit amet consectetur',
-  'Sed do eiusmod tempor incididunt ut labore',
-  'Ut enim ad minim veniam quis nostrud',
-  'Duis aute irure dolor in reprehenderit',
-  'Excepteur sint occaecat cupidatat non proident',
+  'Exercer uma liderança mais íntegra, presente e alinhada a seus valores',
+  'Desenvolver clareza emocional e responsabilidade pelos próprios sentimentos',
+  'Conduzir conversas difíceis com mais segurança e humanidade',
+  'Fortalecer relações de confiança e colaboração genuína com o time',
+  'Ampliar seu impacto sem perder autenticidade ou bem-estar',
+  'Integrar estratégia e qualidade das relações no dia a dia da liderança',
 ];
 
 function Intro() {
@@ -17,14 +18,14 @@ function Intro() {
     <>
       <section style={{ background: '#fff', padding: '120px 0' }} id="sobre">
         <div className="container">
-          <div className="row align-items-center" style={{ gap: '0' }}>
+          <div className="row align-items-center">
 
-            {/* Esquerda — imagem empilhada */}
+            {/* Esquerda — imagem com badge */}
             <div className="col-lg-5 md-mb80">
               <div style={{ position: 'relative' }}>
                 <img
-                  src="/assets/imgs/intro/i2.jpg"
-                  alt=""
+                  src="/assets/imgs/header/mentoria.png"
+                  alt="Mentoria com Priscila Milanese"
                   style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 60px rgba(66,84,176,0.12)' }}
                 />
                 {/* Badge flutuante */}
@@ -39,11 +40,13 @@ function Intro() {
                     padding: '16px 22px',
                     boxShadow: '0 8px 30px rgba(66,84,176,0.35)',
                     textAlign: 'center',
-                    minWidth: '120px',
+                    minWidth: '130px',
                   }}
                 >
-                  <span style={{ fontSize: '32px', fontWeight: 800, display: 'block', lineHeight: 1 }}>00</span>
-                  <span style={{ fontSize: '12px', opacity: 0.85, textTransform: 'uppercase', letterSpacing: '1px' }}>Lorem ipsum</span>
+                  <span style={{ fontSize: '32px', fontWeight: 800, display: 'block', lineHeight: 1 }}>IIT</span>
+                  <span style={{ fontSize: '11px', opacity: 0.9, textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.4, display: 'block', marginTop: '4px' }}>
+                    Formação<br />Internacional CNV
+                  </span>
                 </div>
               </div>
             </div>
@@ -61,16 +64,17 @@ function Intro() {
                   marginBottom: '16px',
                 }}
               >
-                Lorem ipsum dolor sit
+                Para quem é esta mentoria
               </span>
               <h2 style={{ color: '#0f0f0f', fontWeight: 700, lineHeight: 1.2, marginBottom: '20px' }}>
-                Lorem ipsum dolor{' '}
-                <span style={{ fontWeight: 200 }}>sit amet consectetur</span>{' '}
-                adipiscing elit.
+                Para líderes que querem{' '}
+                <span style={{ fontWeight: 200 }}>crescer sem se perder</span>{' '}
+                no caminho.
               </h2>
               <p style={{ color: '#666', lineHeight: 1.8, marginBottom: '32px' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                A mentoria é um processo individual, profundo e aplicado à sua realidade.
+                Unindo 20 anos de experiência corporativa à Comunicação Não Violenta,
+                apoio líderes a desenvolverem o que mais importa — de dentro para fora.
               </p>
 
               {/* Lista de benefícios */}
@@ -80,12 +84,13 @@ function Intro() {
                     key={i}
                     style={{
                       display: 'flex',
-                      alignItems: 'center',
+                      alignItems: 'flex-start',
                       gap: '14px',
                       padding: '12px 0',
                       borderBottom: '1px solid #f0f0f0',
                       color: '#333',
                       fontSize: '15px',
+                      lineHeight: 1.5,
                     }}
                   >
                     <span
@@ -101,6 +106,7 @@ function Intro() {
                         fontSize: '13px',
                         fontWeight: 700,
                         flexShrink: 0,
+                        marginTop: '1px',
                       }}
                     >
                       ✓
@@ -114,7 +120,7 @@ function Intro() {
                 onClick={() => setOpenForm(true)}
                 className="butn butn-md butn-bord radius-30"
               >
-                Lorem ipsum dolor
+                Quero iniciar minha mentoria
               </button>
             </div>
 

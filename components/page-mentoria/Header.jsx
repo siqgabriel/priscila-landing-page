@@ -24,7 +24,7 @@ function Header() {
           overflow: 'hidden',
         }}
       >
-        {/* Bloco decorativo roxo — direita */}
+        {/* Bloco decorativo azul — direita */}
         <div
           style={{
             position: 'absolute',
@@ -54,7 +54,7 @@ function Header() {
                   marginBottom: '16px',
                 }}
               >
-                Lorem ipsum dolor sit
+                Mentoria Individual com base na CNV
               </span>
               <h1
                 style={{
@@ -65,13 +65,13 @@ function Header() {
                   marginBottom: '24px',
                 }}
               >
-                Mentoria
+                Lidere com
                 <br />
-                <span style={{ fontWeight: 200, color: '#4254b0' }}>Lorem Ipsum</span>
+                <span style={{ fontWeight: 200, color: '#4254b0' }}>mais consciência</span>
               </h1>
               <p style={{ color: '#555', fontSize: '17px', lineHeight: 1.8, maxWidth: '460px', margin: 0 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna. Ut enim ad minim veniam quis nostrud.
+                Um espaço de escuta, reflexão e prática para líderes que desejam crescer com
+                integridade — integrando estratégia, autoconsciência e qualidade das relações.
               </p>
 
               <div className="d-flex align-items-center mt-40" style={{ gap: '16px', flexWrap: 'wrap' }}>
@@ -79,10 +79,10 @@ function Header() {
                   onClick={() => setOpenForm(true)}
                   className="butn butn-md butn-bord radius-30"
                 >
-                  Lorem ipsum dolor
+                  Quero iniciar minha mentoria
                 </button>
                 <a
-                  href="#processo"
+                  href="#como-funciona"
                   style={{
                     color: '#4254b0',
                     fontSize: '13px',
@@ -92,13 +92,13 @@ function Header() {
                     textDecoration: 'underline',
                   }}
                 >
-                  Lorem ipsum <i className="ti-arrow-top-right" />
+                  Como funciona <i className="ti-arrow-top-right" />
                 </a>
               </div>
 
               {/* Tags */}
               <div className="d-flex mt-40" style={{ gap: '10px', flexWrap: 'wrap' }}>
-                {['Lorem ipsum', 'Dolor sit amet', 'Consectetur'].map((tag, i) => (
+                {['CNV', 'Liderança Consciente', 'Desenvolvimento Humano'].map((tag, i) => (
                   <span
                     key={i}
                     style={{
@@ -121,8 +121,8 @@ function Header() {
             <div className="col-lg-6 d-flex justify-content-center">
               <div style={{ position: 'relative', width: '100%', maxWidth: '420px' }}>
                 <img
-                  src="/assets/imgs/intro/i1.jpg"
-                  alt=""
+                  src="/assets/imgs/header/header2.png"
+                  alt="Priscila Milanese — Mentora de Líderes"
                   style={{
                     width: '100%',
                     borderRadius: '24px',
@@ -143,10 +143,10 @@ function Header() {
                   }}
                 >
                   <span style={{ fontSize: '40px', fontWeight: 800, color: '#4254b0', lineHeight: 1, display: 'block' }}>
-                    00+
+                    20+
                   </span>
                   <p style={{ fontSize: '13px', color: '#777', margin: '6px 0 0', lineHeight: 1.5 }}>
-                    Lorem ipsum<br />dolor sit amet
+                    anos de experiência<br />em RH e Liderança
                   </p>
                 </div>
               </div>

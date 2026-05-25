@@ -7,7 +7,7 @@ function CTA() {
 
     return (
         <>
-            <section className="section-padding" style={{ background: '#fff', padding: '120px 0' }}>
+            <section style={{ background: '#fff', padding: '120px 0' }}>
                 <div className="container">
                     <div
                         style={{
@@ -19,7 +19,7 @@ function CTA() {
                             overflow: 'hidden',
                         }}
                     >
-                        {/* Blur decorativo */}
+                        {/* Elemento decorativo */}
                         <div
                             style={{
                                 position: 'absolute',
@@ -33,18 +33,19 @@ function CTA() {
                             }}
                         />
 
-                        <span className="sub-title mb-5" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                            Lorem ipsum dolor sit amet
+                        <span className="sub-title mb-5" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                            Pronto para o próximo passo?
                         </span>
                         <h3 className="fw-600 mt-10 mb-20" style={{ color: '#fff' }}>
-                            Lorem ipsum dolor sit{' '}
-                            <span className="fw-200">amet consectetur</span>
+                            Se você deseja fortalecer sua liderança{' '}
+                            <span className="fw-200">de forma consciente,</span>
                             <br />
-                            adipiscing elit <span className="fw-200">sed do eiusmod.</span>
+                            humana e eficaz,{' '}
+                            <span className="fw-200">será um prazer caminhar ao seu lado.</span>
                         </h3>
-                        <p style={{ color: 'rgba(255,255,255,0.75)', maxWidth: '560px', margin: '0 auto 40px' }}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua ut enim ad minim.
+                        <p style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '560px', margin: '0 auto 40px', lineHeight: 1.8 }}>
+                            A mentoria começa com uma conversa. Entre em contato e vamos entender juntos
+                            como posso apoiar o seu desenvolvimento.
                         </p>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
                             <button
@@ -52,13 +53,13 @@ function CTA() {
                                 className="butn butn-md radius-30"
                                 style={{ background: '#fff', color: '#4254b0', border: '1px solid #fff', fontWeight: 600 }}
                             >
-                                Lorem ipsum dolor
+                                Quero iniciar minha mentoria
                             </button>
                             <a
-                                href="#processo"
+                                href="#como-funciona"
                                 className="butn butn-md butn-bord-thin radius-30"
                             >
-                                Lorem ipsum
+                                Entender o processo
                             </a>
                         </div>
                     </div>

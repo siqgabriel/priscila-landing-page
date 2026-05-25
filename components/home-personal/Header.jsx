@@ -8,11 +8,9 @@ function Header() {
   const [openForm, setOpenForm] = useState(false);
   const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila.png');
 
-  // Detecta tamanho da tela e define imagem correta
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-
       if (width < 440) {
         setBgImage('/assets/imgs/header/priscila-mobile.png');
       } else if (width >= 440 && width < 768) {
@@ -21,10 +19,8 @@ function Header() {
         setBgImage('/assets/imgs/header/priscila.png');
       }
     };
-
-    handleResize(); // inicial
+    handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -37,11 +33,9 @@ function Header() {
       { opacity: 1, translateY: 0 },
       '-=0'
     );
-
     return () => tl.kill();
   }, []);
 
-  // Reaplica background quando muda a imagem
   useEffect(() => {
     loadBackgroudImages();
   }, [bgImage]);
@@ -53,40 +47,28 @@ function Header() {
         data-background={bgImage}
         data-overlay-dark="2"
       >
-        <div className="container ontop">
+        <div className="container ontop mb-80 mt-80 mb-lg-80 mt-lg-20">
           <div className="row">
             <div className="col-15 col-lg-8">
               <div className="caption">
-                {/* <div className='flex align-items-center'>
-                  <span className="icon-img-50 mr-10">
-                    <img src="/assets/imgs/header/star.png" alt="" />
-                  </span>
-                  <h6 className="" style={{ textTransform: 'uppercase', textAlign: 'left' }}>
-                    Workshop
-                    <br />
-                    Liderança
-                    <br />
-                    Consciente
-                  </h6>
-                </div> */}
 
                 <h1 className="fw-200 mb-10">
-                  Lorem impsum
+                  Liderança que
                   <br />
-                  aductus poles in
+                  transforma de
                   <span
                     className="main-color fw-700"
                     style={{ textShadow: '0px 0px 15px #a2b7e3' }}
                   >
-                    valorem opus cut golten
+                    {' '}dentro para fora
                   </span>
                 </h1>
 
                 <div className="text mt-10">
                   <p className="p1">
-                    Vestibulum vitae feugiat augue. Maecenas quam dolor, tempus nec sagittis id, pulvinar at turpis.{' '}
+                    Psicóloga, especialista em RH e mentora com 20 anos de experiência.{' '}
                     <strong>
-                      Sed condimentum sagittis lectus nec molestie aenean enim diam, molestie a pellentesque quis.  
+                      Apoio líderes a desenvolverem uma liderança mais consciente, humana e eficaz — com base na Comunicação Não Violenta.
                     </strong>
                   </p>
                 </div>
@@ -96,9 +78,10 @@ function Header() {
                     onClick={() => setOpenForm(true)}
                     className="butn butn-md butn-bord radius-30"
                   >
-                    Preencha o formulário
+                    Quero conhecer as soluções
                   </button>
                 </div>
+
               </div>
             </div>
           </div>

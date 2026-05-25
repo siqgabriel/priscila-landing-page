@@ -112,6 +112,11 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
+              <a className="nav-link2" href="/quem-sou-eu">
+                <span className="rolling-text">Quem sou eu</span>
+              </a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/page-contact">
                 <span className="rolling-text">Contato</span>
               </a>

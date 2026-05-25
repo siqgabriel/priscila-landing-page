@@ -1,10 +1,10 @@
 import React from 'react';
 
 const metricas = [
-  { valor: '00+', label: 'Lorem Ipsum' },
-  { valor: '00h', label: 'Dolor Sit Amet' },
-  { valor: '00%', label: 'Consectetur' },
-  { valor: '00+', label: 'Adipiscing Elit' },
+  { valor: '20+', label: 'Anos em RH & A&D' },
+  { valor: '13', label: 'Anos na Natura&Co' },
+  { valor: '100%', label: 'Base na CNV' },
+  { valor: '2', label: 'Empresas Fortune 500' },
 ];
 
 function Numbers() {

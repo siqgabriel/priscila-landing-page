@@ -4,15 +4,14 @@ import ProgressScroll from '@/components/common/ProgressScroll';
 import Cursor from '@/components/common/cusor';
 import LoadingScreen from '@/components/common/loader';
 import Footer from '@/components/common/Footer';
-import Navbar from '@/components/common/Navbar';
+import Navbar2 from '@/components/common/Navbar2';
 import Script from 'next/script';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import Header from '@/components/page-about/Header';
-import Intro from '@/components/page-about/Intro';
-import Numbers from '@/components/page-about/Numbers';
+import Portfolio from '@/components/page-about/Portfolio';
 import Services from '@/components/page-about/Services';
 import WorkshopTimeline from '@/components/home-personal/WorkshopTimeline';
-import InvestmentSection from '@/components/home-personal/InvestmentSection';
+import InvestmentSection from '@/components/common/InvestmentSection2';
 
 export const metadata = {
   title: 'webfolio',
@@ -35,13 +34,12 @@ export default function Home() {
       <Cursor />
       <ProgressScroll />
       <Lines />
-      <Navbar />
+      <Navbar2 />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">
             <Header />
-            <Intro />
-            <Numbers />
+            <Portfolio />
             <Services />
             <Testimonials />
             <WorkshopTimeline />

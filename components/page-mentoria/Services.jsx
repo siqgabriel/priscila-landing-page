@@ -3,30 +3,30 @@ import React from 'react';
 const etapas = [
   {
     num: '01',
-    titulo: 'Lorem Ipsum',
-    texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    titulo: 'Encontro Inicial',
+    texto: 'Conversamos sobre sua trajetória, contexto atual e o que você deseja desenvolver. Esse primeiro encontro serve para alinhar expectativas e definir o foco do processo.',
   },
   {
     num: '02',
-    titulo: 'Dolor Sit Amet',
-    texto: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+    titulo: 'Diagnóstico e Escuta',
+    texto: 'Aprofundamos o olhar sobre seus padrões de liderança, relacionamentos e pontos de desenvolvimento. A escuta qualificada é a base de tudo.',
   },
   {
     num: '03',
-    titulo: 'Consectetur',
-    texto: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.',
+    titulo: 'Prática e Reflexão',
+    texto: 'Em cada sessão, trabalhamos situações reais do seu dia a dia, aplicando ferramentas da CNV e desenvolvendo novas formas de pensar, sentir e agir como líder.',
   },
   {
     num: '04',
-    titulo: 'Adipiscing Elit',
-    texto: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.',
+    titulo: 'Integração e Continuidade',
+    texto: 'Consolidamos os aprendizados e construímos um plano prático para que as mudanças se sustentem no longo prazo — na sua rotina, no seu time e nas suas relações.',
   },
 ];
 
 function Process() {
   return (
     <section
-      id="processo"
+      id="como-funciona"
       style={{ background: 'linear-gradient(135deg, #f3f0fb 0%, #eaf0fd 100%)', padding: '120px 0' }}
     >
       <div className="container">
@@ -44,11 +44,11 @@ function Process() {
               marginBottom: '14px',
             }}
           >
-            Lorem ipsum dolor sit
+            Como a mentoria funciona
           </span>
           <h2 style={{ color: '#0f0f0f', fontWeight: 700, maxWidth: '540px', margin: '0 auto' }}>
-            Lorem ipsum dolor{' '}
-            <span style={{ fontWeight: 200, color: '#4b2f95' }}>sit amet consectetur.</span>
+            Um processo em etapas,{' '}
+            <span style={{ fontWeight: 200, color: '#4b2f95' }}>construído com você.</span>
           </h2>
         </div>
 

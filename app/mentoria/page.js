@@ -6,12 +6,10 @@ import LoadingScreen from '@/components/common/loader';
 import Footer from '@/components/common/Footer';
 import Navbar2 from '@/components/common/Navbar2';
 import Script from 'next/script';
-import Testimonials from '@/components/page-mentoria/Testimonials';
 import Header from '@/components/page-mentoria/Header';
 import Intro from '@/components/page-mentoria/Intro';
 import Numbers from '@/components/page-mentoria/Numbers';
 import Services from '@/components/page-mentoria/Services';
-import Pricing from '@/components/page-mentoria/Pricing';
 import Cta from '@/components/page-mentoria/Cta';
 
 export const metadata = {

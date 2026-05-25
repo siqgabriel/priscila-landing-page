@@ -4,13 +4,12 @@ import ProgressScroll from '@/components/common/ProgressScroll';
 import Cursor from '@/components/common/cusor';
 import LoadingScreen from '@/components/common/loader';
 import Footer from '@/components/common/Footer';
-import Marq2 from '@/components/common/Marq2';
 import Navbar2 from '@/components/common/Navbar2';
 import Script from 'next/script';
-import Header from '@/components/page-services-details/Header';
-import Intro from '@/components/page-services-details/Intro';
-import Feat from '@/components/page-services-details/Feat';
-import Intro2 from '@/components/home-digital-agency/Intro2';
+import Header from '@/components/page-priscila/Header';
+import Trajetoria from '@/components/page-priscila/Trajetoria';
+import Competencias from '@/components/page-priscila/Competencias';
+import Contato from '@/components/page-priscila/Contato';
 
 export const metadata = {
   title: 'webfolio',
@@ -38,9 +37,9 @@ export default function Home() {
         <div id="smooth-content">
           <main className="main-bg o-hidden">
             <Header />
-            <Intro />
-            <Feat />
-            <Intro2 />
+            <Trajetoria />
+            <Competencias />
+            <Contato />
           </main>
           <Footer />
         </div>
