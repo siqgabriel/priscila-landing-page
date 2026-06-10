@@ -8,7 +8,6 @@ import Navbar2 from '@/components/common/Navbar2';
 import Script from 'next/script';
 import Header from '@/components/page-mentoria/Header';
 import Intro from '@/components/page-mentoria/Intro';
-import Numbers from '@/components/page-mentoria/Numbers';
 import Services from '@/components/page-mentoria/Services';
 import Cta from '@/components/page-mentoria/Cta';
 
@@ -36,7 +35,6 @@ export default function Home() {
       <Navbar2 />
       <Header />
       <Intro />
-      <Numbers />
       <Services />
       <Cta />
       <div id="smooth-wrapper">

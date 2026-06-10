@@ -121,7 +121,7 @@ function Header() {
             <div className="col-lg-6 d-flex justify-content-center">
               <div style={{ position: 'relative', width: '100%', maxWidth: '420px' }}>
                 <img
-                  src="/assets/imgs/header/header2.png"
+                  src="/assets/imgs/header/priscila5.png"
                   alt="Priscila Milanese — Mentora de Líderes"
                   style={{
                     width: '100%',

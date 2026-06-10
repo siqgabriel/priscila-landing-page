@@ -37,12 +37,6 @@ function Services() {
                   conexões mais reais, conversas mais honestas e relações mais saudáveis.
                 </p>
               </div>
-              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
-              </div>
             </div>
           </div>
 
@@ -63,12 +57,6 @@ function Services() {
                   clareza sobre seus padrões emocionais, valores e formas de se relacionar —
                   tornando suas escolhas mais intencionais e menos reativas.
                 </p>
-              </div>
-              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
               </div>
             </div>
           </div>
@@ -93,12 +81,6 @@ function Services() {
                   <br />
                 </p>
               </div>
-              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
-              </div>
             </div>
           </div>
 
@@ -117,12 +99,6 @@ function Services() {
                   Ajudo líderes a reconectarem suas decisões e comportamentos ao que mais
                   importa — para si e para os outros.
                 </p>
-              </div>
-              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
               </div>
             </div>
           </div>
@@ -143,12 +119,6 @@ function Services() {
                   de aprendizagem para cada processo que conduzo.
                 </p>
               </div>
-              <div className="flex align-items-center mt-40" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
-              </div>
             </div>
           </div>
 
@@ -167,12 +137,6 @@ function Services() {
                   qualificada, sem julgamento, que cria o espaço necessário para que cada
                   líder encontre suas próprias respostas — com mais clareza e confiança.
                 </p>
-              </div>
-              <div className="flex align-items-center mt-40 justify-content-around" style={{ gap: '30px' }}>
-                <a href="/quem-sou" className="scroll-to-price">
-                  <span className="ti-arrow-top-right"></span>
-                </a>
-                <h6 className="fw-200 fs-2">Saiba mais</h6>
               </div>
             </div>
           </div>

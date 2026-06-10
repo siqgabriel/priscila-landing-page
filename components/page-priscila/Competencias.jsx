@@ -10,31 +10,31 @@ const formacao = [
 
 const cnv = [
   { titulo: 'International Intensive Training (IIT)', subtitulo: 'CNVC · Novo México, EUA · 2024' },
-  { titulo: 'Candidatura a Facilitadora em CNV', subtitulo: 'Centro Internacional de Comunicação Não Violenta' },
-  { titulo: 'Compassion Course Online', subtitulo: 'New York Center of NVC · 2025' },
+  { titulo: 'Peer Learning & Mentoring Group', subtitulo: 'Karen Starz · 2025/2026' },
+  { titulo: 'Compassion Course Online', subtitulo: 'New York Center of NVC · 2025/2026' },
   { titulo: 'Integrante do Klub Konekti', subtitulo: 'Desde 2024' },
 ];
 
 const experiencia = [
   {
+    empresa: 'Mineração Rio Deserto',
+    periodo: '2003 – 2008',
+    descricao: 'Recrutamento e Seleção, Comunicação Interna, Treinamentos e Saúde Ocupacional para apoiar trabalhadores em atividade de alto risco.',
+  },
+  {
     empresa: 'Natura&Co',
-    periodo: '13 anos',
-    descricao: 'Educação Corporativa, liderança, desenvolvimento de talentos, aprendizagem e cultura organizacional. Grande escola que me provocou a crescer constantemente.',
+    periodo: '2009 – 2023',
+    descricao: 'Educação Corporativa, desenvolvimento de talentos e de liderança, com foco na construção de uma cultura de aprendizagem.',
   },
   {
     empresa: 'Aramis',
-    periodo: 'Atuação em RH & A&D',
-    descricao: 'Aprendizagem & Desenvolvimento, com foco em liderança e desenvolvimento de pessoas.',
-  },
-  {
-    empresa: 'ONG Amor Philia',
-    periodo: 'Desde 2021',
-    descricao: 'Voluntária em Suporte Emocional para Mulheres.',
+    periodo: '2023 – 2024',
+    descricao: 'Governança de RH, Aprendizagem, Desenvolvimento e Desempenho, com foco na construção de um RH estratégico.',
   },
   {
     empresa: 'Vivência Internacional',
-    periodo: '16 meses — Nova York, EUA',
-    descricao: 'Imersão na CNV e desenvolvimento pessoal intenso. Período que redefiniu minha forma de trabalhar e de me relacionar.',
+    periodo: 'Nova York, EUA',
+    descricao: 'Imersão na CNV e desenvolvimento pessoal inerente a um processo de migração. Período que redefiniu minha forma de trabalhar e de me relacionar.',
   },
 ];
 

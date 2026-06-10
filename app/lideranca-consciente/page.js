@@ -12,6 +12,7 @@ import Portfolio from '@/components/page-about/Portfolio';
 import Services from '@/components/page-about/Services';
 import WorkshopTimeline from '@/components/home-personal/WorkshopTimeline';
 import InvestmentSection from '@/components/common/InvestmentSection2';
+import EbookBanner from '@/components/page-about/Ebookbanner';
 
 export const metadata = {
   title: 'webfolio',
@@ -39,6 +40,7 @@ export default function Home() {
         <div id="smooth-content">
           <main className="main-bg o-hidden">
             <Header />
+            <EbookBanner />
             <Portfolio />
             <Services />
             <Testimonials />

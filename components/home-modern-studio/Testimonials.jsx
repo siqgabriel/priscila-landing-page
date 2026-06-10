@@ -1,261 +1,350 @@
 'use client';
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+const videos = [
+  {
+    src: '/assets/video/video-nathan.mp4',
+    nome: 'Nathan',
+    cargo: 'Coordenador de People Analytics e Performance',
+    inicial: 'N',
+    cor: '#4254b0',
+  },
+  {
+    src: '/assets/video/video-fernanda.mp4',
+    nome: 'Fernanda',
+    cargo: 'Gerente de Sustentabilidade',
+    inicial: 'F',
+    cor: '#4b2f95',
+  },
+  {
+    src: '/assets/video/video-3.mp4',
+    nome: 'Depoimento',
+    cargo: 'Participante do Workshop',
+    inicial: 'D',
+    cor: '#4254b0',
+  },
+];
+
+function VideoThumb({ video, onPlay }) {
+  const videoRef = useRef(null);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  // Carrega o primeiro frame como thumbnail
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    el.currentTime = 0.5;
+    const handleLoaded = () => setThumbLoaded(true);
+    el.addEventListener('loadeddata', handleLoaded);
+    return () => el.removeEventListener('loadeddata', handleLoaded);
+  }, []);
+
+  return (
+    <div
+      onClick={onPlay}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: 'relative',
+        borderRadius: '20px',
+        overflow: 'hidden',
+        cursor: 'pointer',
+        aspectRatio: '9/16',
+        maxHeight: '480px',
+        background: '#e8edfa',
+        boxShadow: hovered
+          ? `0 20px 60px ${video.cor}40`
+          : '0 4px 24px rgba(0,0,0,0.08)',
+        transition: 'box-shadow 0.3s ease',
+      }}
+    >
+      {/* Vídeo mudo para thumbnail */}
+      <video
+        ref={videoRef}
+        src={video.src}
+        muted
+        playsInline
+        preload="metadata"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          display: 'block',
+          transition: 'transform 0.4s ease',
+          transform: hovered ? 'scale(1.04)' : 'scale(1)',
+        }}
+      />
+
+      {/* Overlay escuro suave */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: hovered
+            ? 'linear-gradient(to top, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.1) 100%)'
+            : 'linear-gradient(to top, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.05) 100%)',
+          transition: 'background 0.3s ease',
+        }}
+      />
+
+      {/* Botão Play */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: `translate(-50%, -50%) scale(${hovered ? 1.1 : 1})`,
+          transition: 'transform 0.3s ease',
+          width: '64px',
+          height: '64px',
+          borderRadius: '50%',
+          background: hovered ? video.cor : 'rgba(255,255,255,0.92)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: `0 8px 32px ${video.cor}50`,
+        }}
+      >
+        {/* Triângulo play */}
+        <div
+          style={{
+            width: 0,
+            height: 0,
+            borderTop: '10px solid transparent',
+            borderBottom: '10px solid transparent',
+            borderLeft: `18px solid ${hovered ? '#fff' : video.cor}`,
+            marginLeft: '4px',
+            transition: 'border-color 0.3s ease',
+          }}
+        />
+      </div>
+
+      {/* Info na base */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          padding: '20px 20px 24px',
+        }}
+      >
+        <h6
+          style={{
+            color: '#fff',
+            fontWeight: 700,
+            fontSize: '16px',
+            margin: '0 0 4px',
+          }}
+        >
+          {video.nome}
+        </h6>
+        <span
+          style={{
+            fontSize: '12px',
+            color: 'rgba(255,255,255,0.75)',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+          }}
+        >
+          {video.cargo}
+        </span>
+      </div>
+
+      {/* Tag "Assistir" no topo direito */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '16px',
+          right: '16px',
+          background: hovered ? video.cor : 'rgba(255,255,255,0.15)',
+          backdropFilter: 'blur(8px)',
+          borderRadius: '999px',
+          padding: '5px 14px',
+          fontSize: '11px',
+          fontWeight: 600,
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '1px',
+          transition: 'background 0.3s ease',
+          border: '1px solid rgba(255,255,255,0.2)',
+        }}
+      >
+        Assistir
+      </div>
+    </div>
+  );
+}
+
+function VideoModal({ video, onClose }) {
+  const videoRef = useRef(null);
+
+  // Fecha com ESC
+  useEffect(() => {
+    const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  // Autoplay ao abrir
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => { });
+    }
+  }, []);
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 99999,
+        background: 'rgba(0,0,0,0.92)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+      }}
+    >
+      {/* Container do vídeo — evita fechar ao clicar no vídeo */}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: '420px',
+          borderRadius: '20px',
+          overflow: 'hidden',
+          boxShadow: '0 40px 100px rgba(0,0,0,0.6)',
+        }}
+      >
+        <video
+          ref={videoRef}
+          src={video.src}
+          controls
+          playsInline
+          style={{
+            width: '100%',
+            display: 'block',
+            maxHeight: '85vh',
+            objectFit: 'contain',
+            background: '#000',
+          }}
+        />
+      </div>
+
+      {/* Botão fechar */}
+      <button
+        onClick={onClose}
+        style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          width: '44px',
+          height: '44px',
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.1)',
+          border: '1px solid rgba(255,255,255,0.2)',
+          color: '#fff',
+          fontSize: '22px',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backdropFilter: 'blur(8px)',
+          transition: 'background 0.2s',
+          lineHeight: 1,
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
+        onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+      >
+        ×
+      </button>
+    </div>
+  );
+}
+
 function Testimonials() {
+  const [videoAtivo, setVideoAtivo] = useState(null);
+
   const swiperOptions = {
     modules: [Navigation],
-    slidesPerView: 'auto',
-
-    spaceBetween: 30,
-    loop: true,
+    spaceBetween: 24,
+    loop: false,
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 'auto',
-      },
+      0: { slidesPerView: 1.15 },
+      640: { slidesPerView: 2.1 },
+      1024: { slidesPerView: 3 },
     },
-
     navigation: {
-      nextEl: '.testim-modern .swiper-button-next',
-      prevEl: '.testim-modern .swiper-button-prev',
+      nextEl: '.testim-videos .swiper-button-next',
+      prevEl: '.testim-videos .swiper-button-prev',
     },
   };
+
   return (
-    <section className="testim-modern mb-80 mt-80 bord-top-grd bord-bottom-grd">
-      <div className="container">
-        <div className="sec-head mb-80">
-          <div className="d-flex align-items-center">
-            <div>
-              <span className="sub-title main-color mb-5">Depoimentos</span>
-              <h3 className="fw-600 fz-50 text-u d-rotate wow">
-                <span className="rotate-text">
-                  Histórias <span className="fw-200">reais</span>
-                </span>
-              </h3>
-            </div>
-            <div className="ml-auto">
-              <div className="swiper-arrow-control">
-                <div className="swiper-button-prev">
-                  <span className="ti-arrow-left"></span>
-                </div>
-                <div className="swiper-button-next">
-                  <span className="ti-arrow-right"></span>
+    <>
+      <section className="testim-videos mb-80 mt-80 bord-top-grd bord-bottom-grd">
+        <div className="container">
+
+          {/* Cabeçalho */}
+          <div className="sec-head mb-80">
+            <div className="d-flex align-items-center">
+              <div>
+                <span className="sub-title main-color mb-5">Depoimentos</span>
+                <h3 className="fw-600 fz-50 text-u d-rotate wow">
+                  <span className="rotate-text">
+                    Histórias <span className="fw-200">reais</span>
+                  </span>
+                </h3>
+              </div>
+              <div className="ml-auto">
+                <div className="swiper-arrow-control">
+                  <div className="swiper-button-prev">
+                    <span className="ti-arrow-left"></span>
+                  </div>
+                  <div className="swiper-button-next">
+                    <span className="ti-arrow-right"></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="testim-swiper3 out-right"
-          data-carousel="swiper"
-          data-loop="true"
-          data-space="30"
-        >
+
+          {/* Carrossel de vídeos */}
           <Swiper
             {...swiperOptions}
-            id="content-carousel-container-unq-testim"
             className="swiper-container"
-            data-swiper="container"
           >
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “Ju tem sido uma guia incrível para minha vida. As consultas de tarot realmente trouxeram clareza para decisões difíceis que eu tinha que tomar. Me sinto muito mais equilibrado agora!”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/1.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">João P.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        19/09/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Passei por um período de bloqueios emocionais e, após minha consulta, senti uma transformação profunda. Ju trouxe muita paz e luz para a minha vida. Recomendo muito! "
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/2.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Carla M.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        03/10/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Fiquei muito impressionada com a precisão da leitura das cartas. Ju foi muito acolhedora e me ajudou a encontrar o caminho certo para minha vida amorosa. Recomendo de coração! ”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/3.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Sofia R.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        02/11/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Nunca imaginei que uma consulta espiritual poderia trazer tanto alívio para o meu espírito. Ju me ajudou a desbloquear minha energia e hoje minha vida está mais tranquila e harmoniosa. "
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/4.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">
-                        Renato S.
-                      </h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        08/11/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Estava em um momento muito difícil da minha vida e a ajuda espiritual que recebi fez toda a diferença. Ju me ajudou a ver tudo sob uma nova perspectiva.  Sou muito grata a ela!”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/5.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Luciana F.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        19/12/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Ju é uma verdadeira fonte de sabedoria. Com a ajuda dos orixás, consegui superar um relacionamento que estava me fazendo mal. Sou muito grato por tudo o que ela me ensinou. ”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/6.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Carlos T.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        11/12/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <div className="text">
-                    <p>
-                      “ Minha vida amorosa estava em crise e depois da consulta com Ju, as coisas começaram a mudar. Senti uma verdadeira conexão espiritual. É incrível como ela consegue trazer paz. ”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/7.png" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Fernanda A.</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-
-                        26/11/2024
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+            {videos.map((video, i) => (
+              <SwiperSlide key={i}>
+                <VideoThumb
+                  video={video}
+                  onPlay={() => setVideoAtivo(video)}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
+
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modal fullscreen */}
+      {videoAtivo && (
+        <VideoModal
+          video={videoAtivo}
+          onClose={() => setVideoAtivo(null)}
+        />
+      )}
+    </>
   );
 }
 

@@ -41,7 +41,7 @@ function Header() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="row align-items-end" style={{ minHeight: '60vh' }}>
 
-            {/* Esquerda — foto encostada na base (invertido) */}
+            {/* Esquerda — foto encostada na base */}
             <div
               className="col-lg-6 d-flex justify-content-center align-items-end md-mb80"
               style={{ paddingBottom: 0 }}
@@ -59,7 +59,7 @@ function Header() {
                     maxHeight: '700px',
                   }}
                 />
-                {/* Card anos de experiência — canto inferior direito (invertido) */}
+                {/* Card anos de experiência — canto inferior direito */}
                 <div
                   style={{
                     position: 'absolute',
@@ -79,7 +79,7 @@ function Header() {
                     anos em RH<br />& Liderança
                   </p>
                 </div>
-                {/* Card CNV — canto superior esquerdo (invertido) */}
+                {/* Card CNV — canto superior esquerdo */}
                 <div
                   style={{
                     position: 'absolute',
@@ -102,7 +102,7 @@ function Header() {
               </div>
             </div>
 
-            {/* Direita — texto (invertido) */}
+            {/* Direita — texto */}
             <div className="col-lg-6" style={{ paddingBottom: '80px' }}>
               <span
                 style={{
@@ -132,15 +132,15 @@ function Header() {
                 <span style={{ fontWeight: 200, color: '#4254b0' }}>Priscila Milanese</span>
               </h1>
 
-              <p style={{ color: '#555', fontSize: '17px', lineHeight: 1.8, maxWidth: '460px', margin: '0 0 24px' }}>
-                Nasci em Criciúma, cresci com curiosidade genuína por pessoas — e fiz da
-                Psicologia e do desenvolvimento humano o centro de toda a minha trajetória.
+              <p style={{ color: '#555', fontSize: '17px', lineHeight: 1.8, maxWidth: '460px', margin: '0 0 20px' }}>
+                Possuo uma curiosidade genuína pelas pessoas e fiz da Psicologia e do
+                Desenvolvimento Humano o centro de toda a minha trajetória profissional.
               </p>
 
               <p style={{ color: '#777', fontSize: '15px', lineHeight: 1.8, maxWidth: '460px', margin: 0 }}>
                 20 anos em RH, 13 na Natura, 16 meses em Nova York e uma imersão
-                transformadora na Comunicação Não Violenta me trouxeram até aqui:
-                apoiando líderes a crescerem sem se perderem no caminho.
+                transformadora na Comunicação Não Violenta me trouxeram até aqui: apoiando
+                líderes a crescerem com autenticidade e impactando positivamente os seus times.
               </p>
 
               <div className="d-flex align-items-center mt-40" style={{ gap: '16px', flexWrap: 'wrap' }}>

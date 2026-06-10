@@ -45,7 +45,7 @@ function Intro() {
               </div>
             </div>
 
-            {/* Números */}
+            {/* Números
             <div className="numbers mt-80 md-mb50">
               <div className="row lg-marg">
                 <div className="col-md-6">
@@ -75,7 +75,7 @@ function Intro() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Imagem lateral */}

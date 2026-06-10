@@ -194,7 +194,7 @@ function Contato() {
           </div>
 
           {/* Bloco de citação final */}
-          <div
+          {/* <div
             style={{
               marginTop: '60px',
               borderRadius: '24px',
@@ -233,7 +233,7 @@ function Contato() {
             <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.65)', fontWeight: 500 }}>
               — Priscila Milanese
             </span>
-          </div>
+          </div> */}
 
         </div>
       </section>

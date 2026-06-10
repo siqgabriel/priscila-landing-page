@@ -45,7 +45,7 @@ function Header() {
             <div className="col-lg-6 d-flex justify-content-center md-mb80">
               <div style={{ position: 'relative', width: '100%', maxWidth: '420px' }}>
                 <img
-                  src="/assets/imgs/header/consultoria.png"
+                  src="/assets/imgs/header/priscila6.png"
                   alt="Priscila Milanese — Consultoria em A&D"
                   style={{
                     width: '100%',
@@ -53,7 +53,7 @@ function Header() {
                     boxShadow: '0 30px 80px rgba(66,84,176,0.18)',
                   }}
                 />
-                {/* Card stat flutuante — direita inferior (invertido) */}
+                {/* Card stat flutuante — direita inferior (invertido)
                 <div
                   style={{
                     position: 'absolute',
@@ -72,7 +72,7 @@ function Header() {
                   <p style={{ fontSize: '13px', color: '#777', margin: '6px 0 0', lineHeight: 1.5 }}>
                     anos liderando A&D<br />na Natura&Co
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 

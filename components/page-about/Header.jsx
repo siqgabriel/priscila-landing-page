@@ -6,17 +6,17 @@ import LeadFormModal from '../home-personal/LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
-  const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila2.png');
+  const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila7.png');
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 440) {
-        setBgImage('/assets/imgs/header/priscila2.png');
+        setBgImage('/assets/imgs/header/priscila7.png');
       } else if (width >= 440 && width < 768) {
-        setBgImage('/assets/imgs/header/priscila2.png');
+        setBgImage('/assets/imgs/header/priscila7.png');
       } else {
-        setBgImage('/assets/imgs/header/priscila2.png');
+        setBgImage('/assets/imgs/header/priscila7.png');
       }
     };
     handleResize();
@@ -104,7 +104,7 @@ function Header() {
               </h1>
 
               <p style={{ color: '#555', fontSize: '17px', lineHeight: 1.8, maxWidth: '460px', margin: 0 }}>
-                Descubra como exercer uma liderança que equilibra pessoas e performance,{' '}
+                Descubra como exercer uma liderança que equilibra pessoas e resultados,{' '}
                 <strong style={{ color: '#333' }}>
                   através da Comunicação Não Violenta — uma abordagem que já transformou centenas de líderes no mundo todo.
                 </strong>

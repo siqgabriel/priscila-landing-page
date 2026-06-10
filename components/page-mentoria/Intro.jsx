@@ -28,7 +28,7 @@ function Intro() {
                   alt="Mentoria com Priscila Milanese"
                   style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 60px rgba(66,84,176,0.12)' }}
                 />
-                {/* Badge flutuante */}
+                {/* Badge flutuante
                 <div
                   style={{
                     position: 'absolute',
@@ -47,7 +47,7 @@ function Intro() {
                   <span style={{ fontSize: '11px', opacity: 0.9, textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.4, display: 'block', marginTop: '4px' }}>
                     Formação<br />Internacional CNV
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
 
