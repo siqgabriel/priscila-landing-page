@@ -3,11 +3,27 @@ import Lines from '@/components/common/Lines';
 import ProgressScroll from '@/components/common/ProgressScroll';
 import Cursor from '@/components/common/cusor';
 import LoadingScreen from '@/components/common/loader';
-import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar2';
 import Script from 'next/script';
-import Error from '@/components/page-404/Error';
+import Header from '@/components/page-contact/Header';
+import Contact from '@/components/page-contact/Contact';
+import Map from '@/components/page-contact/Map';
+
 export const metadata = {
-  title: 'webfolio',
+  title: 'Contato',
+  description: 'Lidere com mais segurança e menos desgaste emocional.',
+  openGraph: {
+    title: 'Contato',
+    description: 'Lidere com mais segurança e menos desgaste emocional.',
+    images: [
+      {
+        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
@@ -31,11 +47,11 @@ export default function Home() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">
-            <Error />
+            <Contact />
           </main>
+          <Footer />
         </div>
       </div>
-
       <Script
         src="/assets/js/ScrollTrigger.min.js"
         strategy="beforeInteractive"
@@ -44,7 +60,6 @@ export default function Home() {
         src="/assets/js/ScrollSmoother.min.js"
         strategy="beforeInteractive"
       />
-
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
       <Script
         strategy="beforeInteractive"
@@ -58,7 +73,6 @@ export default function Home() {
         strategy="beforeInteractive"
         src="/assets/js/countdown.js"
       ></Script>
-
       <Script
         strategy="beforeInteractive"
         src="/assets/js/gsap.min.js"
@@ -75,10 +89,8 @@ export default function Home() {
         strategy="beforeInteractive"
         src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"
       ></Script>
-
       {/* <Script src="/assets/js/smoother-script.js" strategy="lazyOnload" /> */}
-
-      <Script src="/assets/js/scripts.js"></Script>
+      <Script src="/assets/js/scripts.js"></Script>{' '}
     </body>
   );
 }

@@ -1,7 +1,6 @@
 'use client';
 import React, { useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import LeadFormModal from '../home-personal/LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
@@ -110,12 +109,13 @@ function Header() {
               </p>
 
               <div className="d-flex align-items-center mt-40" style={{ gap: '16px', flexWrap: 'wrap' }}>
-                <button
-                  onClick={() => setOpenForm(true)}
+                <a
+                  href='https://wa.me/5511981017106?text=Ol%C3%A1%20Priscila!%20Vim%20pelo%20site'
+                  target='_blank'
                   className="butn butn-md butn-bord radius-30"
                 >
                   Fale com a Priscila
-                </button>
+                </a>
                 <a
                   href="#solucoes"
                   style={{
@@ -155,8 +155,6 @@ function Header() {
           </div>
         </div>
       </section>
-
-      <LeadFormModal open={openForm} onClose={() => setOpenForm(false)} />
     </>
   );
 }

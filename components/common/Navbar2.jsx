@@ -117,7 +117,7 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link2" href="/page-contact">
+              <a className="nav-link2" href="/contato">
                 <span className="rolling-text">Contato</span>
               </a>
             </li>

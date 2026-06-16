@@ -12,7 +12,19 @@ import Services from '@/components/page-mentoria/Services';
 import Cta from '@/components/page-mentoria/Cta';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'Mentoria',
+  description: 'Lidere com mais segurança e menos desgaste emocional.',
+  openGraph: {
+    title: 'Mentoria',
+    description: 'Lidere com mais segurança e menos desgaste emocional.',
+    images: [
+      {
+        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

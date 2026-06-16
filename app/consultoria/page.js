@@ -13,7 +13,19 @@ import Feat from '@/components/page-services-details/Feat';
 import Intro2 from '@/components/home-digital-agency/Intro2';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'Consultoria',
+  description: 'Lidere com mais segurança e menos desgaste emocional.',
+  openGraph: {
+    title: 'Consultoria',
+    description: 'Lidere com mais segurança e menos desgaste emocional.',
+    images: [
+      {
+        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

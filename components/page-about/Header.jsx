@@ -2,21 +2,21 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
-  const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila7.png');
+  const [bgImage, setBgImage] = useState('/assets/imgs/header/priscila8.png');
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 440) {
-        setBgImage('/assets/imgs/header/priscila7.png');
+        setBgImage('/assets/imgs/header/priscila8.png');
       } else if (width >= 440 && width < 768) {
-        setBgImage('/assets/imgs/header/priscila7.png');
+        setBgImage('/assets/imgs/header/priscila8.png');
       } else {
-        setBgImage('/assets/imgs/header/priscila7.png');
+        setBgImage('/assets/imgs/header/priscila8.png');
       }
     };
     handleResize();
@@ -197,7 +197,7 @@ function Header() {
                     8 encontros
                   </span>
                   <p style={{ fontSize: '13px', color: '#777', margin: '6px 0 0', lineHeight: 1.5 }}>
-                    100% online e ao vivo<br />terças, 19h às 21h
+                    100% online e ao vivo<br />quintas, 08h às 10h
                   </p>
                 </div>
               </div>

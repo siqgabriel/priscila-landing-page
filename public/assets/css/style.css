@@ -8642,6 +8642,23 @@ footer.clean-footer.crev .circle-blur {
   color: rgba(255,255,255,0.6);
 }
 
+.lead-input2 {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #4254b0;
+  background: #3f51b524;
+  color: #4254b0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.lead-input2::placeholder {
+  color: #4254b07d;
+}
+
+
+
 /* STEP */
 .lead-step-webfolio h6 {
   font-size: 18px;

@@ -1,7 +1,7 @@
 'use client';
 import React, { useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
@@ -59,7 +59,8 @@ function Header() {
                     maxHeight: '700px',
                   }}
                 />
-                {/* Card anos de experiência — canto inferior direito */}
+{/* 
+                Card anos de experiência — canto inferior direito
                 <div
                   style={{
                     position: 'absolute',
@@ -79,7 +80,7 @@ function Header() {
                     anos em RH<br />& Liderança
                   </p>
                 </div>
-                {/* Card CNV — canto superior esquerdo */}
+                Card CNV — canto superior esquerdo
                 <div
                   style={{
                     position: 'absolute',
@@ -98,7 +99,8 @@ function Header() {
                   <span style={{ fontSize: '11px', opacity: 0.9, textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.4, display: 'block', marginTop: '4px' }}>
                     Formação<br />Internacional CNV
                   </span>
-                </div>
+                </div> */}
+
               </div>
             </div>
 

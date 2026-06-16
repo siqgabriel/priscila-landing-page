@@ -2,7 +2,7 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
-import LeadFormModal from './LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);

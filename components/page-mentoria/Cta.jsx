@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import MentoriaFormModal from './MentoriaFormModal';
 
 function CTA() {
     const [openForm, setOpenForm] = useState(false);
@@ -55,10 +55,7 @@ function CTA() {
                             >
                                 Quero iniciar minha mentoria
                             </button>
-                            <a
-                                href="#como-funciona"
-                                className="butn butn-md butn-bord-thin radius-30"
-                            >
+                            <a href="#como-funciona" className="butn butn-md butn-bord-thin radius-30">
                                 Entender o processo
                             </a>
                         </div>
@@ -66,7 +63,7 @@ function CTA() {
                 </div>
             </section>
 
-            <LeadFormModal open={openForm} onClose={() => setOpenForm(false)} />
+            <MentoriaFormModal open={openForm} onClose={() => setOpenForm(false)} />
         </>
     );
 }

@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 
 function Portfolio() {
   const [openForm, setOpenForm] = useState(false);

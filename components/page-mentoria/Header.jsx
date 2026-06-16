@@ -1,7 +1,7 @@
 'use client';
 import React, { useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import MentoriaFormModal from './MentoriaFormModal';
 
 function Header() {
   const [openForm, setOpenForm] = useState(false);
@@ -156,7 +156,7 @@ function Header() {
         </div>
       </section>
 
-      <LeadFormModal open={openForm} onClose={() => setOpenForm(false)} />
+      <MentoriaFormModal open={openForm} onClose={() => setOpenForm(false)} />
     </>
   );
 }

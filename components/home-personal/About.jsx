@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import LeadFormModal from './LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 
 function About() {
   const [openForm, setOpenForm] = useState(false);
@@ -23,7 +23,7 @@ function About() {
 
               <div className="text">
                 <h4 className="mb-30">
-                  Priscila Milanese,{' '}
+                  Priscila Milanese{' '}
                   <span className="fw-200">
                     20 anos transformando líderes e culturas organizacionais
                   </span>

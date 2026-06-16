@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import MentoriaFormModal from './MentoriaFormModal';
 
 const beneficios = [
   'Exercer uma liderança mais íntegra, presente e alinhada a seus valores',
@@ -128,7 +128,7 @@ function Intro() {
         </div>
       </section>
 
-      <LeadFormModal open={openForm} onClose={() => setOpenForm(false)} />
+      <MentoriaFormModal open={openForm} onClose={() => setOpenForm(false)} />
     </>
   );
 }

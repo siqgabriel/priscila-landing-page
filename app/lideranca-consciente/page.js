@@ -9,13 +9,23 @@ import Script from 'next/script';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import Header from '@/components/page-about/Header';
 import Portfolio from '@/components/page-about/Portfolio';
-import Services from '@/components/page-about/Services';
 import WorkshopTimeline from '@/components/home-personal/WorkshopTimeline';
-import InvestmentSection from '@/components/common/InvestmentSection2';
-import EbookBanner from '@/components/page-about/Ebookbanner';
+import InvestmentSection from '@/components/common/InvestmentSection';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'Workshop Liderança Consciente',
+  description: 'Lidere com mais segurança e menos desgaste emocional.',
+  openGraph: {
+    title: 'Workshop Liderança Consciente',
+    description: 'Lidere com mais segurança e menos desgaste emocional.',
+    images: [
+      {
+        url: 'https://primila.com.br/assets/imgs/og-priscila-workshop.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
@@ -40,9 +50,7 @@ export default function Home() {
         <div id="smooth-content">
           <main className="main-bg o-hidden">
             <Header />
-            <EbookBanner />
             <Portfolio />
-            <Services />
             <Testimonials />
             <WorkshopTimeline />
             <InvestmentSection />

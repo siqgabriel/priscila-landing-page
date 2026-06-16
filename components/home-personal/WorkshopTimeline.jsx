@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import LeadFormModal from '../home-personal/LeadFormModal';
+import LeadFormModal from '../common/LeadFormModal';
 import {
     FaBrain,
     FaBolt,
@@ -75,8 +75,8 @@ function WorkshopTimeline() {
                     <div className="format-card">
                         <FaCalendarAlt />
                         <div>
-                            <strong>Terças-feiras</strong>
-                            <span>19h às 21h</span>
+                            <strong>Quintas-feiras</strong>
+                            <span>08h às 10h</span>
                         </div>
                     </div>
 
@@ -108,7 +108,7 @@ function WorkshopTimeline() {
                         <FaRocket />
                         <div>
                             <strong>Início</strong>
-                            <span>10/03/2026</span>
+                            <span>06/08/2026</span>
                         </div>
                     </div>
 
@@ -116,7 +116,7 @@ function WorkshopTimeline() {
                         <FaLayerGroup />
                         <div>
                             <strong>8 encontros</strong>
-                            <span>até 05/05/2026</span>
+                            <span>até 24/09/2026</span>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ function WorkshopTimeline() {
                     <div className="timeline-cards premium">
                         {encontros.map((item, index) => (
                             <div className="timeline-card premium" key={index}>
-                                <div className='d-flex align-items-center' style={{gap:'20px'}}>
+                                <div className='d-flex align-items-center' style={{ gap: '20px' }}>
                                     <div className="timeline-icon">
                                         {item.icon}
                                     </div>

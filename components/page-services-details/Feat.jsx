@@ -12,7 +12,11 @@ function Feat() {
               </span>
             </h2>
             <div className="ml-auto vi-more">
-              <a href="#contato" className="butn butn-sm butn-bord radius-30">
+              <a
+                href='https://wa.me/5511981017106?text=Ol%C3%A1%20Priscila!%20Vim%20pelo%20site'
+                target='_blank'
+                className="butn butn-sm butn-bord radius-30"
+              >
                 <span>Fale comigo</span>
               </a>
             </div>

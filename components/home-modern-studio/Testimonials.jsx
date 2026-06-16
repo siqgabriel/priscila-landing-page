@@ -6,22 +6,25 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const videos = [
   {
     src: '/assets/video/video-nathan.mp4',
-    nome: 'Nathan',
+    nome: 'Natan Silva',
     cargo: 'Coordenador de People Analytics e Performance',
+    empresa: 'Aramis',
     inicial: 'N',
     cor: '#4254b0',
   },
   {
     src: '/assets/video/video-fernanda.mp4',
-    nome: 'Fernanda',
+    nome: 'Fernanda Ormonde',
     cargo: 'Gerente de Sustentabilidade',
+    empresa: 'Aramis',
     inicial: 'F',
     cor: '#4b2f95',
   },
   {
     src: '/assets/video/video-3.mp4',
-    nome: 'Depoimento',
-    cargo: 'Participante do Workshop',
+    nome: 'Nathalia Costa',
+    cargo: 'Gestora Financeira',
+    empresa: 'FertGroup',
     inicial: 'D',
     cor: '#4254b0',
   },
@@ -151,6 +154,20 @@ function VideoThumb({ video, onPlay }) {
           }}
         >
           {video.cargo}
+        </span>
+        <br />
+        <span
+          style={{
+            fontSize: '10px',
+            padding: '2px 10px',
+            borderRadius: '20px',
+            color: '#ffffff',
+            backgroundColor: '#ffffff4a',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+          }}
+        >
+          {video.empresa}
         </span>
       </div>
 
