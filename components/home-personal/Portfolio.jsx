@@ -126,7 +126,7 @@ function Portfolio() {
                     <br />
                     <li>Reduza conflitos, aumente o engajamento e fortaleça sua comunicação;</li>
                     <br />
-                    <li>Baseado na Comunicação Não Violenta — metodologia própria.</li>
+                    <li>Baseado na Comunicação Não Violenta.</li>
                   </ul>
 
                   <h6 className="fw-200 fz-15">

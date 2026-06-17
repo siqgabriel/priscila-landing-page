@@ -66,7 +66,7 @@ function Header() {
 
                 <div className="text mt-10">
                   <p className="p1">
-                    Psicóloga, especialista em RH e mentora com 20 anos de experiência.{' '}
+                    Psicóloga, com 20 anos de atuação em Desenvolvimento Humano e Organizacional.{' '}
                     <strong>
                       Apoio líderes a desenvolverem uma liderança mais consciente, humana e eficaz — com base na Comunicação Não Violenta.
                     </strong>
