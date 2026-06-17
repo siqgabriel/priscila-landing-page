@@ -108,7 +108,7 @@ function WorkshopTimeline() {
                         <FaRocket />
                         <div>
                             <strong>Início</strong>
-                            <span>06/08/2026</span>
+                            <span>30/07/2026</span>
                         </div>
                     </div>
 
