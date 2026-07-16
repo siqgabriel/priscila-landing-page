@@ -118,7 +118,7 @@ function Portfolio() {
                     Uma jornada de 8 encontros online ao vivo para líderes que querem ir além do operacional.
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
-                    <li>8 encontros ao vivo, terças 19h às 21h;</li>
+                    <li>8 encontros ao vivo, terças 08h às 10h;</li>
                     <br />
                     <li>Aprenda a liderar a partir da autoconsciência e da empatia;</li>
                     <br />
