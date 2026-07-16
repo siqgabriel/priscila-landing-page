@@ -28,16 +28,16 @@ function Footer() {
               <h6 className="sub-title mb-30">Páginas</h6>
               <ul className="rest fz-14 opacity-7" style={{ listStyleType: "none" }}>
                 <li className="mb-15">
-                  <a href="/page-about">Workshop</a>
+                  <a href="/lideranca-consciente">Workshop</a>
                 </li>
                 <li className="mb-15">
-                  <a href="/page-services">Mentoria</a>
+                  <a href="/mentoria">Mentoria</a>
                 </li>
                 <li className="mb-15">
-                  <a href="/blog-grid-sidebar">Consultoria</a>
+                  <a href="/consultoria">Consultoria</a>
                 </li>
                 <li>
-                  <a href="/page-contact">Contato</a>
+                  <a href="/contato">Contato</a>
                 </li>
               </ul>
             </div>
