@@ -39,7 +39,7 @@ function WorkshopTimeline() {
     }, []);
 
     const encontros = [
-        { icon: <FaBrain />, event: 'Encontro 1', title: 'Consciência de Si', output: 'Clareza sobre quem você é e o seu papel como líder.' },
+        { icon: <FaBrain />, event: 'Encontro 1', title: 'Consciência de Si', output: 'Clareza sobre suas necessidades como líder.' },
         { icon: <FaBolt />, event: 'Encontro 2', title: 'Liderar sob Pressão', output: 'Menos reatividade, mais escolha consciente.' },
         { icon: <FaProjectDiagram />, event: 'Encontro 3', title: 'Do Controle à Confiança', output: 'Delegação segura e autonomia no time.' },
         { icon: <FaHeart />, event: 'Encontro 4', title: 'Empatia na Liderança', output: 'Conexões que geram engajamento real.' },
