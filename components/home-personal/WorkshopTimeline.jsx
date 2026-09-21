@@ -39,14 +39,12 @@ function WorkshopTimeline() {
     }, []);
 
     const encontros = [
-        { icon: <FaBrain />, event: 'Encontro 1', title: 'Consciência de Si', output: 'Clareza sobre suas necessidades como líder.' },
-        { icon: <FaBolt />, event: 'Encontro 2', title: 'Liderar sob Pressão', output: 'Menos reatividade, mais escolha consciente.' },
-        { icon: <FaProjectDiagram />, event: 'Encontro 3', title: 'Do Controle à Confiança', output: 'Delegação segura e autonomia no time.' },
-        { icon: <FaHeart />, event: 'Encontro 4', title: 'Empatia na Liderança', output: 'Conexões que geram engajamento real.' },
-        { icon: <FaComments />, event: 'Encontro 5', title: 'Comunicação Autêntica', output: 'Clareza, responsabilidade e menos ruído.' },
-        { icon: <FaHandshakeSlash />, event: 'Encontro 6', title: 'Gestão de Conflitos', output: 'Transformar tensões em colaboração.' },
-        { icon: <FaBullseye />, event: 'Encontro 7', title: 'Feedback Consciente', output: 'Conversas que desenvolvem pessoas.' },
-        { icon: <FaChartLine />, event: 'Encontro 8', title: 'Sustentando a Liderança', output: 'Plano prático para aplicar no dia a dia.' },
+        { icon: <FaBrain />, event: 'Encontro 1', title: 'Consciência de Si', output: 'Reconhecendo seu estilo de liderança.' },
+        { icon: <FaBolt />, event: 'Encontro 2', title: 'Consciência do Outro', output: 'Clareza sobre o impacto da nossa comunicação na relação.' },
+        { icon: <FaProjectDiagram />, event: 'Encontro 3', title: 'Do Controle à Confiança', output: 'Desenvolvendo autonomia no time.' },
+        { icon: <FaHeart />, event: 'Encontro 4', title: 'Empatia na Liderança', output: 'Escuta que gera conexão e engajamento.' },
+        { icon: <FaComments />, event: 'Encontro 5', title: 'Gestão de Conflitos', output: 'Transformando tensões em colaboração.' },
+        { icon: <FaHandshakeSlash />, event: 'Encontro 6', title: 'Feedback Consciente', output: 'Conversas que desenvolvem pessoas.' },
     ];
 
     return (
@@ -108,15 +106,15 @@ function WorkshopTimeline() {
                         <FaRocket />
                         <div>
                             <strong>Início</strong>
-                            <span>06/08/2026</span>
+                            <span>04/11/2026</span>
                         </div>
                     </div>
 
                     <div className="format-card">
                         <FaLayerGroup />
                         <div>
-                            <strong>8 encontros</strong>
-                            <span>até 24/09/2026</span>
+                            <strong>6 encontros</strong>
+                            <span>até 09/12/2026</span>
                         </div>
                     </div>
                 </div>

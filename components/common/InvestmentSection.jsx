@@ -33,7 +33,7 @@ function InvestmentSection() {
                 <h4 className="investment-title">À vista no PIX</h4>
                 <div className="investment-price">
                   <span className="currency">R$</span>
-                  <span className="value">997</span>
+                  <span className="value">750</span>
                   <span className="cents">,00</span>
                 </div>
                 <p className="investment-desc">
@@ -60,7 +60,7 @@ function InvestmentSection() {
                 <div className="investment-price small">
                   <span className="value">12x</span>
                   <span className="currency"> R$</span>
-                  <span className="value">99</span>
+                  <span className="value">75</span>
                   <span className="cents">,00</span>
                 </div>
                 <p className="investment-desc">
