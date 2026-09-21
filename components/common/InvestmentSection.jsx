@@ -41,7 +41,7 @@ function InvestmentSection() {
                   Garanta <strong>10% de desconto</strong> no valor total.
                 </p>
                 <ul className="investment-benefits">
-                  <li>✔ Acesso completo aos 8 encontros</li>
+                  <li>✔ Acesso completo aos 6 encontros</li>
                   <li>✔ Material de apoio</li>
                   <li>✔ Experiência completa do workshop</li>
                   <li>✔ Confirmação imediata da vaga</li>

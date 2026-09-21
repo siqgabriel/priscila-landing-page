@@ -8,7 +8,7 @@ function Numbers() {
           <div className="col-lg-4 col-md-6">
             <div className="item text-center md-mb50">
               <div className="o-hidden">
-                <h3 className="stroke">8</h3>
+                <h3 className="stroke">6</h3>
               </div>
               <h6 className="p-color sub-title">Encontros ao Vivo</h6>
             </div>

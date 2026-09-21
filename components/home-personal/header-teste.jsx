@@ -617,7 +617,7 @@ function WorkshopTimeline() {
 
           <h3 className="fw-600 fz-50 text-u d-rotate wow">
             <span className="rotate-text">
-              8 encontros para <span className="fw-200">transformar sua liderança</span>
+              6 encontros para <span className="fw-200">transformar sua liderança</span>
             </span>
           </h3>
 
@@ -671,7 +671,7 @@ function WorkshopTimeline() {
           <div className="format-card">
             <FaLayerGroup />
             <div>
-              <strong>8 encontros</strong>
+              <strong>6 encontros</strong>
               <span>até 05/05/2026</span>
             </div>
           </div>

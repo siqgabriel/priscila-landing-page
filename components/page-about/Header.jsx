@@ -134,7 +134,7 @@ function Header() {
 
               {/* Tags */}
               <div className="d-flex mt-40" style={{ gap: '10px', flexWrap: 'wrap' }}>
-                {['8 Encontros Online', 'CNV na Prática', 'Turmas Reduzidas'].map((tag, i) => (
+                {['6 Encontros Online', 'CNV na Prática', 'Turmas Reduzidas'].map((tag, i) => (
                   <span
                     key={i}
                     style={{
@@ -194,10 +194,10 @@ function Header() {
                     Próxima turma
                   </span>
                   <span style={{ fontSize: '28px', fontWeight: 800, color: '#0f0f0f', lineHeight: 1, display: 'block' }}>
-                    8 encontros
+                    6 encontros
                   </span>
                   <p style={{ fontSize: '13px', color: '#777', margin: '6px 0 0', lineHeight: 1.5 }}>
-                    100% online e ao vivo<br />quintas, 08h às 10h
+                    100% online e ao vivo<br />quartas, 08h às 10h
                   </p>
                 </div>
               </div>

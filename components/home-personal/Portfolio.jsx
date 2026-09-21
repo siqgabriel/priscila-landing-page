@@ -115,10 +115,10 @@ function Portfolio() {
                     {' '}Liderança Consciente
                   </h3>
                   <h6 className="fw-200 mt-10 fz-15">
-                    Uma jornada de 8 encontros online ao vivo para líderes que querem ir além do operacional.
+                    Uma jornada de 6 encontros online ao vivo para líderes que querem ir além do operacional.
                   </h6>
                   <ul className="mt-20 pt-list fz-12">
-                    <li>8 encontros ao vivo, terças 08h às 10h;</li>
+                    <li>6 encontros ao vivo, terças 08h às 10h;</li>
                     <br />
                     <li>Aprenda a liderar a partir da autoconsciência e da empatia;</li>
                     <br />
