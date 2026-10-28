@@ -10,7 +10,7 @@ import Marq from '@/components/home-personal/Marq';
 import About from '@/components/home-personal/About';
 import Services from '@/components/home-personal/Services';
 import Portfolio from '@/components/home-personal/Portfolio';
-import EbookPopup from '@/components/ebook/EbookPopup';
+
 
 export const metadata = {
   title: 'Priscila Milanese',
@@ -43,7 +43,6 @@ export default function Home() {
     <body className="home-personal">
       <LoadingScreen />
       <ProgressScroll />
-      <EbookPopup />
       <Lines />
       <Navbar />
       <div id="smooth-wrapper">
